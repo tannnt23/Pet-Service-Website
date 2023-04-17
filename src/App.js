@@ -1,10 +1,19 @@
 import { Routes, Route, Link } from 'react-router-dom';
 import Header from './components/header/index.js';
+import Content from './components/content/index.js'
+import Footer from './components/footer/index.jsx';
+import Contact from './components/page/contact.js';
+import Home from './components/page/Home.js'
+import Store from './components/page/Store.js'
 
 function App() {
   return (
     <div className='app'>
-      <Header />
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route exact path='/Contact' element={<Contact />} />
+        <Route exact path='/Store' element={<Store />} />
+      </Routes>
     </div>
 
   )

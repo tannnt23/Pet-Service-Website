@@ -1,20 +1,27 @@
+import { Routes, Route, Link } from 'react-router-dom';
 import clsx from 'clsx';
 import classNames from 'classnames/bind';
 import { FaSearch } from 'react-icons/fa'
 import { FaCartPlus } from 'react-icons/fa'
+import { FaPhone } from 'react-icons/fa'
+import { FaChevronDown } from 'react-icons/fa'
 
 // const cl = classNames.bind(styles)
 
 function Header() {
     return (
         <div className=' ' >
-            <div className='flex justify-center h-11 '>
-                <header className='flex bg-slate-600 text-white  justify-between  px-8 text-sm w-1220   '>
+            <div className='flex justify-center bg-slate-600 '>
+                <header className='flex  text-white  justify-between  px-8 text-sm w-1220   '>
                     <div className='flex justify-between'>
+                        <button>
+                            <FaPhone />
+                        </button>
                         <div className='  flex px-4 items-center '>0898520760</div>
+
                         <div className=' flex px-4 items-center'>217 Lâm Văn Bền, P. Bình Thuận, Q.7, HCM</div>
                     </div>
-                    <div className='flex flex-row '>
+                    <div className='flex justify-between  '>
                         {/* search*/}
                         <button className='search -2  px-4 hover:bg-sky-700'>
                             <FaSearch className='' />
@@ -23,37 +30,61 @@ function Header() {
                         <button className='cart px-4 hover:bg-sky-700' >
                             <FaCartPlus className='' />
                         </button>
-                        <div className=' bg-blue-800 basis-1/4 px-4 rounded hover:bg-blue-600'>Log in</div>
-                        <div className='basis-1/4 px-4'> Sign Up</div>
+                        <div className='self-center bg-blue-800 p-2 rounded-lg hover:bg-blue-600'>Log in</div>
+                        <div className='self-center px-6'> Sign Up</div>
 
 
                     </div>
                 </header>
             </div>
 
-            <div className='w-1220 flex justify-center'>
-                <div className='flex flex-row '>
-                    <div>
-                        <img className='w-48' src='https://petservicehcm.com/wp-content/uploads/2019/11/Pet_logo.png.webp' alt='Pet logo'></img>
+            <div className=' flex justify-center pt-6 '>
+                <div className='w-1220 '>
+                    <div className='flex justify-between   '>
+                        <div>
+                            <img className='w-48' src='https://petservicehcm.com/wp-content/uploads/2019/11/Pet_logo.png.webp' alt='Pet logo'></img>
+                        </div>
+
+                        {/* page*/}
+
+                        <Link to='/' className='p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500 '>TRANG CHỦ</Link>
+                        <Link to='/About' className='p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500 '>GIỚI THIỆU</Link>
+                        <Link to='/Service' className='p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500  relative  group  '>DỊCH VỤ
+                            <ul className=' hidden w-264 group-hover:block  z-10 absolute  top-full rounded-lg text-sm text-cyan-900 bg-slate-100 border border-solid border-[#273172] pt-2 '>
+                                <li className=' left-0  p-3 hover:text-teal-500 '> <a>THÚ Y TẠI NHÀ</a></li>
+                                <li className=' left-0  p-3 hover:text-teal-500  '><a>TẮM - VỆ SINH TẠI NHÀ</a></li>
+                                <li className=' left-0  p-3 hover:text-teal-500  '><a>CẮT- TỈA LÔNG TẠI NHÀ</a></li>
+                                <li className=' left-0  p-3 hover:text-teal-500  '><a>DẮT CHÓ ĐI DẠO</a></li>
+                            </ul>
+                            <FaChevronDown className='self-center pl-1 font-none inline' /></Link>
+                        <Link to='/Store' className=' p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500  relative group '>CỬA HÀNG
+                            <ul className=' hidden w-250 group-hover:block  z-10 absolute top-full rounded-lg text-sm text-cyan-900 bg-slate-100 border border-solid border-[#273172] pt-2 '>
+                                <li className=' left-0  p-3 hover:text-teal-500 '> <a>THỰC PHẨM THÚ CƯNG</a></li>
+                                <li className=' left-0  p-3 hover:text-teal-500  '><a>SẢN PHẨM VỆ SINH</a></li>
+                                <li className=' left-0  p-3 hover:text-teal-500  '><a>SẢN PHẨM ĐIỀU TRỊ</a></li>
+                            </ul>
+                            <FaChevronDown className='self-center pl-1 font-none inline' /></Link>
+                        <Link to='/Contact' className='p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500 group relative'>LIÊN HỆ
+                        </Link>
+
+
+                        {/* ONLINE BOOKING*/}
+                        <div className='flex '>
+                            <button className='  p-1.5 bg-black self-center text-white rounded-full hover:bg-sky-800 px-4  '>
+                                ONLINE BOOKING
+
+                            </button>
+
+                        </div>
+
+
+
                     </div>
 
-                    {/* page*/}
-                    <div className='flex flex-row font-bold text-blue-600/100'>
-                        <div className='p-1.5'>TRANG CHỦ</div>
-                        <div className='p-1.5'>GIỚI THIỆU</div>
-                        <div className='p-1.5'>DỊCH VỤ</div>
-                        <div className='p-1.5'>CỦA HÀNG</div>
-                        <div className='p-1.5'>LIÊN HỆ</div>
-                    </div>
-
-                    {/* ONLINE BOOKING*/}
-                    <div className=''>
-                        ONLINE BOOKING
-                    </div>
                 </div>
             </div>
 
-        </div>
+        </div >
     )
 }
 
