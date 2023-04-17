@@ -1,16 +1,16 @@
 import Footer from "../footer";
 import Header from "../header";
-import Food from "../category/Food";
+import Hygiene from "../category/Food";
 
-function Store() {
+function HygieneProduct() {
     return (
         <div>
             <Header />
             {/* sản phẩm thú cưng  */}
-            <Food />
-
+            <Hygiene />
+            <Footer />
         </div>
     )
 }
 
-export default Store;
+export default HygieneProduct;

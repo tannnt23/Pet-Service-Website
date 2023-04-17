@@ -30,8 +30,8 @@ function Header() {
                         <button className='cart px-4 hover:bg-sky-700' >
                             <FaCartPlus className='' />
                         </button>
-                        <div className='self-center bg-blue-800 p-2 rounded-lg hover:bg-blue-600'>Log in</div>
-                        <div className='self-center px-6'> Sign Up</div>
+                        <a href='' className='self-center bg-blue-800 p-2 rounded-lg hover:bg-blue-600'>Log in</a>
+                        <a href='' className='self-center  p-2 rounded-lg hover:bg-sky-700'> Sign Up</a>
 
 
                     </div>
@@ -49,19 +49,19 @@ function Header() {
 
                         <Link to='/' className='p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500 '>TRANG CHỦ</Link>
                         <Link to='/About' className='p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500 '>GIỚI THIỆU</Link>
-                        <Link to='/Service' className='p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500  relative  group  '>DỊCH VỤ
+                        <Link to='' className='p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500  relative  group  '>DỊCH VỤ
                             <ul className=' hidden w-264 group-hover:block  z-10 absolute  top-full rounded-lg text-sm text-cyan-900 bg-slate-100 border border-solid border-[#273172] pt-2 '>
-                                <li className=' left-0  p-3 hover:text-teal-500 '> <a>THÚ Y TẠI NHÀ</a></li>
-                                <li className=' left-0  p-3 hover:text-teal-500  '><a>TẮM - VỆ SINH TẠI NHÀ</a></li>
-                                <li className=' left-0  p-3 hover:text-teal-500  '><a>CẮT- TỈA LÔNG TẠI NHÀ</a></li>
-                                <li className=' left-0  p-3 hover:text-teal-500  '><a>DẮT CHÓ ĐI DẠO</a></li>
+                                <li className=' left-0  p-3 hover:text-teal-500 '> <Link to=''>THÚ Y TẠI NHÀ</Link></li>
+                                <li className=' left-0  p-3 hover:text-teal-500  '><Link to=''>TẮM - VỆ SINH TẠI NHÀ</Link></li>
+                                <li className=' left-0  p-3 hover:text-teal-500  '><Link to=''>CẮT- TỈA LÔNG TẠI NHÀ</Link></li>
+                                <li className=' left-0  p-3 hover:text-teal-500  '><Link to=''>DẮT CHÓ ĐI DẠO</Link></li>
                             </ul>
                             <FaChevronDown className='self-center pl-1 font-none inline' /></Link>
-                        <Link to='/Store' className=' p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500  relative group '>CỬA HÀNG
+                        <Link to='' className=' p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500  relative group '>CỬA HÀNG
                             <ul className=' hidden w-250 group-hover:block  z-10 absolute top-full rounded-lg text-sm text-cyan-900 bg-slate-100 border border-solid border-[#273172] pt-2 '>
-                                <li className=' left-0  p-3 hover:text-teal-500 '> <a>THỰC PHẨM THÚ CƯNG</a></li>
-                                <li className=' left-0  p-3 hover:text-teal-500  '><a>SẢN PHẨM VỆ SINH</a></li>
-                                <li className=' left-0  p-3 hover:text-teal-500  '><a>SẢN PHẨM ĐIỀU TRỊ</a></li>
+                                <li className=' left-0  p-3 hover:text-teal-500 '> <Link to='/FoodProduct'>THỰC PHẨM THÚ CƯNG</Link></li>
+                                <li className=' left-0  p-3 hover:text-teal-500  '><Link to='/HygieneProduct'>SẢN PHẨM VỆ SINH</Link></li>
+                                <li className=' left-0  p-3 hover:text-teal-500  '><Link to='/TreatmentProduct'>SẢN PHẨM ĐIỀU TRỊ</Link></li>
                             </ul>
                             <FaChevronDown className='self-center pl-1 font-none inline' /></Link>
                         <Link to='/Contact' className='p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500 group relative'>LIÊN HỆ

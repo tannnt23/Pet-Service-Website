@@ -1,8 +1,5 @@
-
-
-// thực phẩm thú cưng
-
-function Food() {
+// sản phẩm vệ sinh
+function Treatment() {
     return (
         <div>
             <h1>sad</h1>
@@ -10,4 +7,4 @@ function Food() {
     )
 }
 
-export default Food;
+export default Treatment;

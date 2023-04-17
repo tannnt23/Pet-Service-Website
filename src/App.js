@@ -4,18 +4,21 @@ import Content from './components/content/index.js'
 import Footer from './components/footer/index.jsx';
 import Contact from './components/page/contact.js';
 import Home from './components/page/Home.js'
-import Store from './components/page/Store.js'
+import FoodProduct from './components/page/FoodProduct.js'
+import HygieneProduct from './components/page/HygieneProduct.js'
+import TreatmentProduct from './components/page/TreatmentProduct.js';
 
 function App() {
   return (
     <div className='app'>
       <Routes>
-        <Route exact path='/' element={<Home />} />
-        <Route exact path='/Contact' element={<Contact />} />
-        <Route exact path='/Store' element={<Store />} />
+        <Route exact path='/' element={<Home />} /> {/* trang chủ */}
+        <Route exact path='/Contact' element={<Contact />} /> {/* trang liên hệ */}
+        <Route exact path='/FoodProduct' element={<FoodProduct />} /> {/*  trang store thực phẩm thú cưng*/}
+        <Route exact path='/HygieneProduct' element={<HygieneProduct />} /> {/*  trang store sản phẩm vệ sinh thú cưng*/}
+        <Route exact path='/TreatmentProduct' element={<TreatmentProduct />} /> {/*  trang store sản phẩm điều trịthú cưng*/}
       </Routes>
     </div>
-
   )
 }
 
