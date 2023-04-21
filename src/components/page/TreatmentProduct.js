@@ -1,11 +1,13 @@
 import Footer from "../footer";
 import Header from "../header";
 import Treatment from "../category/Food";
+import BannerTreatment from "../banner/BannerTreatment";
 
 function TreatmentProduct() {
     return (
         <div>
             <Header />
+            <BannerTreatment />
             {/* sản phẩm thú cưng  */}
             <Treatment />
             <Footer />

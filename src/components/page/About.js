@@ -1,14 +1,14 @@
 import Footer from "../footer";
 import Header from "../header";
 
-function Contact() {
+function About() {
     return (
         <div>
             <Header />
-            <h1 className=" ">contact</h1>
+            <h1>asd</h1>
             <Footer />
         </div>
-
     )
 }
-export default Contact;
+
+export default About;

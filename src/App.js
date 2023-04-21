@@ -2,21 +2,25 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Header from './components/header/index.js';
 import Content from './components/content/index.js'
 import Footer from './components/footer/index.jsx';
-import Contact from './components/page/contact.js';
+import Contact from './components/page/Contact.js';
 import Home from './components/page/Home.js'
 import FoodProduct from './components/page/FoodProduct.js'
 import HygieneProduct from './components/page/HygieneProduct.js'
 import TreatmentProduct from './components/page/TreatmentProduct.js';
+import About from './components/page/About.js';
+import OnlineBooking from './components/page/OnlineBooking.js';
 
 function App() {
   return (
     <div className='app'>
       <Routes>
         <Route exact path='/' element={<Home />} /> {/* trang chủ */}
-        <Route exact path='/Contact' element={<Contact />} /> {/* trang liên hệ */}
-        <Route exact path='/FoodProduct' element={<FoodProduct />} /> {/*  trang store thực phẩm thú cưng*/}
-        <Route exact path='/HygieneProduct' element={<HygieneProduct />} /> {/*  trang store sản phẩm vệ sinh thú cưng*/}
-        <Route exact path='/TreatmentProduct' element={<TreatmentProduct />} /> {/*  trang store sản phẩm điều trịthú cưng*/}
+        <Route path='/About' element={<About />} /> {/* trang giới thiệu */}
+        <Route path='/FoodProduct' element={<FoodProduct />} /> {/*  trang store thực phẩm thú cưng*/}
+        <Route path='/HygieneProduct' element={<HygieneProduct />} /> {/*  trang store sản phẩm vệ sinh thú cưng*/}
+        <Route path='/TreatmentProduct' element={<TreatmentProduct />} /> {/*  trang store sản phẩm điều trịthú cưng*/}
+        <Route path='/Contact' element={<Contact />} /> {/* trang liên hệ */}
+        <Route path='/OnlineBooking' element={<OnlineBooking />} /> {/* trang liên hệ */}
       </Routes>
     </div>
   )

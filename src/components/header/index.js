@@ -6,13 +6,11 @@ import { FaCartPlus } from 'react-icons/fa'
 import { FaPhone } from 'react-icons/fa'
 import { FaChevronDown } from 'react-icons/fa'
 
-// const cl = classNames.bind(styles)
-
 function Header() {
     return (
         <div className=' ' >
             <div className='flex justify-center bg-slate-600 '>
-                <header className='flex  text-white  justify-between  px-8 text-sm w-1220   '>
+                <header className='flex  text-white  justify-between  text-sm w-1220   '>
                     <div className='flex justify-between'>
                         <button>
                             <FaPhone />
@@ -38,7 +36,7 @@ function Header() {
                 </header>
             </div>
 
-            <div className=' flex justify-center pt-6 '>
+            <div className=' flex justify-center py-5 '>
                 <div className='w-1220 '>
                     <div className='flex justify-between   '>
                         <div>
@@ -69,13 +67,13 @@ function Header() {
 
 
                         {/* ONLINE BOOKING*/}
-                        <div className='flex '>
+                        <Link to='/OnlineBooking' className='flex '>
                             <button className='  p-1.5 bg-black self-center text-white rounded-full hover:bg-sky-800 px-4  '>
                                 ONLINE BOOKING
 
                             </button>
 
-                        </div>
+                        </Link>
 
 
 
