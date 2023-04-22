@@ -8,6 +8,8 @@ import FoodProduct from './components/page/FoodProduct.js'
 import HygieneProduct from './components/page/HygieneProduct.js'
 import TreatmentProduct from './components/page/TreatmentProduct.js';
 
+
+
 function App() {
   return (
     <div className='app'>
@@ -18,6 +20,7 @@ function App() {
         <Route exact path='/HygieneProduct' element={<HygieneProduct />} /> {/*  trang store sản phẩm vệ sinh thú cưng*/}
         <Route exact path='/TreatmentProduct' element={<TreatmentProduct />} /> {/*  trang store sản phẩm điều trịthú cưng*/}
       </Routes>
+     
     </div>
   )
 }

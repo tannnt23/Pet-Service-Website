@@ -1,12 +1,15 @@
-function Validator(options){
+export const HandleForm = {
+    Validator(options){
         // Lấy ra form cần validate
         var formElement = document.querySelector(options.form);
         //Xử lý người dùng có nhập trường * hay ko 
+        console.log(formElement)
         function validate (inputElement, rule) {
             var errorElement = inputElement.parentElement.querySelector('.form-message')
             var errorMess = rule.test(inputElement.value);
             if (errorMess) {
                 errorElement.innerText = errorMess;
+                inputElement.style.border = '2px solid red'
             }
             else {
                 errorElement.innerText = '';
@@ -26,22 +29,21 @@ function Validator(options){
                     inputElement.oninput = function () {
                         var errorElement = inputElement.parentElement.querySelector('.form-message')
                         errorElement.innerText='';
+                        inputElement.style.border = '2px solid #7787ea'
                     }
                 }
             })
         }  
-    }
-    
-Validator.isRequire = function(selector){
+    },
+    isRequire(selector){
         return {
             selector:selector,
             test: function (value) {
                 return  value.trim() ? undefined : 'Vui lòng nhập trường này'
             }
         }
-    }
-    
-Validator.isEmail = function(selector){
+    },
+    isEmail(selector){
         return {
             selector:selector,
             test:function(value){
@@ -51,15 +53,6 @@ Validator.isEmail = function(selector){
         }
     }
 
+}
 
-
-Validator({
-    form :'#form-1',
-    rules:[
-        Validator.isRequire('#fullName'),
-        Validator.isRequire('#mess'),
-        Validator.isEmail('#email'),     
-    ]
-});
-
-
+// export default HandleForm.Validator

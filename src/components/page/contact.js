@@ -3,13 +3,12 @@ import Header from "../header";
 import { FaStore } from 'react-icons/fa';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { FaEnvelope } from 'react-icons/fa';
-// import { Validator } from './handleEvent/handleForm'
+import { HandleForm } from './handleEvent/handleForm'
 function Contact() {
-    return (
-        <div>
+    return (   
+        <div>    
             <Header />
-            
-            <div className="Contact ">
+            <div className="Contact">
                 {/* Ảnh */}
                 {/* <section>
                     <img src="https://th.bing.com/th/id/OIP.JATxhtdF75-57WzxAn8plAHaCK?pid=ImgDet&w=1280&h=375&rs=1" alt=""></img>
@@ -54,25 +53,25 @@ function Contact() {
                         <form  action="" method="POST" id="form-1">
                             <div className="mb-[25px]">
                                 <label htmlFor="fullName" className="text-[18px] font-semibold">Họ Tên<span className="text-[#e80000] font-extrabold">*</span></label><br/>
-                                <input id="fullName" type="text" className="border py-3 pr-80 pl-3 outline-none focus:outline-[#7787ea]"></input>
-                                <div className="form-message"></div>
+                                <input id="fullName" type="text" className="border-2 py-3 pr-80 pl-3 outline-none focus:border-[#7787ea]"></input>
+                                <div className="form-message text-[#e80000]"></div>
 
                             </div>
                             <div>
                                 <div className="mb-[25px]">
                                     <label htmlFor="tel" className="text-[18px] font-semibold">Số Điện Thoại</label><br/>
-                                    <input id="tel" type="text" className="border py-3 pr-80 pl-3 outline-none focus:outline-[#7787ea]"></input>
+                                    <input id="tel" type="text" className="border-2 py-3 pr-80 pl-3 outline-none focus:border-[#7787ea]"></input>
                                 </div>
                                 <div className="mb-[25px]">
                                     <label htmlFor="email" className="text-[18px] font-semibold">Email<span className="text-[#e80000] font-extrabold">*</span></label><br/>
-                                    <input id="email" type="email" className="border py-3 pr-80 pl-3 outline-none focus:outline-[#7787ea]"></input>
-                                    <div className="form-message"></div>
+                                    <input id="email" type="email" className="border-2 py-3 pr-80 pl-3 outline-none focus:border-[#7787ea]"></input>
+                                    <div className="form-message text-[#e80000]"></div>
                                 </div>
                             </div>
                             <div className="mb-[25px]">
                                 <label htmlFor="mess" className="text-[18px] font-semibold">Lời Nhắn<span className="text-[#e80000] font-extrabold">*</span></label><br/>
-                                <textarea id="mess" className="w-full outline-none border pl-3 h-[200px] focus:outline-[#7787ea]" placeholder="PSH luôn lắng nghe mọi đóng góp quý báu và không ngừng nâng cấp cải thiện chất lượng dịch vụ nhằm phục vụ quý khách hàng một cách tốt nhất."></textarea>
-                                <div className="form-message"></div>
+                                <textarea id="mess" className="w-full border-2 outline-none pl-3 h-[200px] focus:border-[#7787ea]" placeholder="PSH luôn lắng nghe mọi đóng góp quý báu và không ngừng nâng cấp cải thiện chất lượng dịch vụ nhằm phục vụ quý khách hàng một cách tốt nhất."></textarea>
+                                <div className="form-message text-[#e80000] mt-[-5px]"></div>
                             </div>
                             <div>
                                 <input value="Gửi yêu cầu" type="submit" className="border w-32 h-14 text-white bg-black hover:bg-[#c4c4c4] hover:cursor-pointer ease-in duration-100 transition-colors"></input>
@@ -82,11 +81,19 @@ function Contact() {
                 </div>
                 {/* google map */}
                 <div className="mx-[156px] my-[75px]">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.2312404166914!2d106.80047917495881!3d10.870008889284517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527587e9ad5bf%3A0xafa66f9c8be3c91!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiAtIMSQSFFHIFRQLkhDTQ!5e0!3m2!1svi!2s!4v1682007015702!5m2!1svi!2s" width={1208} height={450} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.2312404166914!2d106.80047917495881!3d10.870008889284517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527587e9ad5bf%3A0xafa66f9c8be3c91!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiAtIMSQSFFHIFRQLkhDTQ!5e0!3m2!1svi!2s!4v1682007015702!5m2!1svi!2s" width={1208} height={450} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-            <script src="./handleEvent/handleForm.js"></script>
+            <HandleForm.Validator
+                form='#form-1'
+                rules = {[
+                    HandleForm.isRequire('#fullName'),
+                    HandleForm.isRequire('#mess'),
+                    HandleForm.isEmail('#email')
+                ]}
+            />
             <Footer />
+            
         </div>
         
     )
