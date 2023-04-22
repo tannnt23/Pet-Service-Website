@@ -3,6 +3,7 @@ import Header from "../header";
 import { FaStore } from 'react-icons/fa';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { FaEnvelope } from 'react-icons/fa';
+// import { Validator } from './handleEvent/handleForm'
 function Contact() {
     return (
         <div>
@@ -44,32 +45,37 @@ function Contact() {
                         </div>
 
                     </div>
+                    {/* form ý kiến */}
                     <div>
+                        
                         <div>Đóng góp ý kiến</div>
                         <div className="mb-3">Các trường được đánh dấu <span className="text-[#e80000] text-[18px] font-extrabold">*</span> là bắt buộc</div>
-
-                        <form>
+                        
+                        <form  action="" method="POST" id="form-1">
                             <div className="mb-[25px]">
-                                <label className="text-[18px] font-semibold">Họ Tên<span className="text-[#e80000] font-extrabold">*</span></label><br/>
-                                <input type="text" className="border py-3 pr-80 pl-3 outline-none"></input>
+                                <label htmlFor="fullName" className="text-[18px] font-semibold">Họ Tên<span className="text-[#e80000] font-extrabold">*</span></label><br/>
+                                <input id="fullName" type="text" className="border py-3 pr-80 pl-3 outline-none focus:outline-[#7787ea]"></input>
+                                <div className="form-message"></div>
+
                             </div>
                             <div>
                                 <div className="mb-[25px]">
-                                    <label className="text-[18px] font-semibold">Số Điện Thoại</label><br/>
-                                    <input type="text" className="border py-3 pr-80 pl-3 outline-none"></input>
+                                    <label htmlFor="tel" className="text-[18px] font-semibold">Số Điện Thoại</label><br/>
+                                    <input id="tel" type="text" className="border py-3 pr-80 pl-3 outline-none focus:outline-[#7787ea]"></input>
                                 </div>
                                 <div className="mb-[25px]">
-                                    <label className="text-[18px] font-semibold">Email<span className="text-[#e80000] font-extrabold">*</span></label><br/>
-                                    <input type="email" className="border py-3 pr-80 pl-3 outline-none"></input>
+                                    <label htmlFor="email" className="text-[18px] font-semibold">Email<span className="text-[#e80000] font-extrabold">*</span></label><br/>
+                                    <input id="email" type="email" className="border py-3 pr-80 pl-3 outline-none focus:outline-[#7787ea]"></input>
+                                    <div className="form-message"></div>
                                 </div>
                             </div>
                             <div className="mb-[25px]">
-                                <label className="text-[18px] font-semibold">Lời Nhắn<span className="text-[#e80000] font-extrabold">*</span></label><br/>
-                               <textarea className="w-full outline-none border pl-3 h-[200px]" placeholder="PSH luôn lắng nghe mọi đóng góp quý báu và không ngừng nâng cấp cải thiện chất lượng dịch vụ nhằm phục vụ quý khách hàng một cách tốt nhất."></textarea>
+                                <label htmlFor="mess" className="text-[18px] font-semibold">Lời Nhắn<span className="text-[#e80000] font-extrabold">*</span></label><br/>
+                                <textarea id="mess" className="w-full outline-none border pl-3 h-[200px] focus:outline-[#7787ea]" placeholder="PSH luôn lắng nghe mọi đóng góp quý báu và không ngừng nâng cấp cải thiện chất lượng dịch vụ nhằm phục vụ quý khách hàng một cách tốt nhất."></textarea>
+                                <div className="form-message"></div>
                             </div>
                             <div>
                                 <input value="Gửi yêu cầu" type="submit" className="border w-32 h-14 text-white bg-black hover:bg-[#c4c4c4] hover:cursor-pointer ease-in duration-100 transition-colors"></input>
-
                             </div>
                         </form>
                     </div>
@@ -79,9 +85,10 @@ function Contact() {
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.2312404166914!2d106.80047917495881!3d10.870008889284517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527587e9ad5bf%3A0xafa66f9c8be3c91!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiAtIMSQSFFHIFRQLkhDTQ!5e0!3m2!1svi!2s!4v1682007015702!5m2!1svi!2s" width={1208} height={450} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
+            <script src="./handleEvent/handleForm.js"></script>
             <Footer />
         </div>
-
+        
     )
 }
 export default Contact;
