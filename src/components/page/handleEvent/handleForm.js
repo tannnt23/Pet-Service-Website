@@ -1,9 +1,9 @@
-export const HandleForm = {
+const HandleForm = {
     Validator(options){
         // Lấy ra form cần validate
         var formElement = document.querySelector(options.form);
         //Xử lý người dùng có nhập trường * hay ko 
-        console.log(formElement)
+        // console.log(formElement)
         function validate (inputElement, rule) {
             var errorElement = inputElement.parentElement.querySelector('.form-message')
             var errorMess = rule.test(inputElement.value);
@@ -23,6 +23,7 @@ export const HandleForm = {
                     // Xử lý trường hợp blur khỏi input
                     inputElement.onblur = function () {
                         validate(inputElement, rule)
+                        console.log(123)
                     }
     
                     // Xử lý khi bắt đầu nhập thì ẩn errorMess
@@ -30,29 +31,17 @@ export const HandleForm = {
                         var errorElement = inputElement.parentElement.querySelector('.form-message')
                         errorElement.innerText='';
                         inputElement.style.border = '2px solid #7787ea'
+                        
                     }
                 }
             })
         }  
     },
-    isRequire(selector){
-        return {
-            selector:selector,
-            test: function (value) {
-                return  value.trim() ? undefined : 'Vui lòng nhập trường này'
-            }
-        }
-    },
-    isEmail(selector){
-        return {
-            selector:selector,
-            test:function(value){
-                var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-                return regex.test(value) ? undefined : 'Trường này phải là email'
-            },
-        }
-    }
-
+    
+   
 }
+export default HandleForm
+// export default function test () {
+//     console.log("Như nào")
+// }
 
-// export default HandleForm.Validator
