@@ -10,6 +10,8 @@ import TreatmentProduct from './components/page/TreatmentProduct.js';
 import About from './components/page/About.js';
 import OnlineBooking from './components/page/OnlineBooking.js';
 
+
+
 function App() {
   return (
     <div className='app'>
@@ -22,6 +24,7 @@ function App() {
         <Route path='/Contact' element={<Contact />} /> {/* trang liên hệ */}
         <Route path='/OnlineBooking' element={<OnlineBooking />} /> {/* trang liên hệ */}
       </Routes>
+     
     </div>
   )
 }

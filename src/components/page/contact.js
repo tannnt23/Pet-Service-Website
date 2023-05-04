@@ -1,5 +1,6 @@
 import Footer from "../footer";
 import Header from "../header";
+import { Component } from "react";
 import { FaStore } from 'react-icons/fa';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { FaEnvelope } from 'react-icons/fa';
