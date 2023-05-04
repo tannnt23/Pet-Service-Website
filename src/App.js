@@ -2,7 +2,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Header from './components/header/index.js';
 import Content from './components/content/index.js'
 import Footer from './components/footer/index.jsx';
-import Contact from './components/page/Contact.js';
+import Contact from './components/page/contact.js';
 import Home from './components/page/Home.js'
 import FoodProduct from './components/page/FoodProduct.js'
 import HygieneProduct from './components/page/HygieneProduct.js'
