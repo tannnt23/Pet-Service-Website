@@ -28,8 +28,8 @@ function Header() {
                         <button className='cart px-4 hover:bg-sky-700' >
                             <FaCartPlus className='' />
                         </button>
-                        <a href='' className='self-center bg-blue-800 p-2 rounded-lg hover:bg-blue-600'>Log in</a>
-                        <a href='' className='self-center  p-2 rounded-lg hover:bg-sky-700'> Sign Up</a>
+                        <Link to='/Login' className='self-center bg-blue-800 p-2 rounded-lg hover:bg-blue-600'>Log in</Link>
+                        <Link to='/Signup' className='self-center  p-2 rounded-lg hover:bg-sky-700'> Sign Up</Link>
 
 
                     </div>
