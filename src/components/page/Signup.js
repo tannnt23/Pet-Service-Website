@@ -9,7 +9,7 @@ function Login() {
     
     const [state, setState] = useState({selector:'', rules:[]});
     var isAll_Valid={'user':false,'tel':false,'email':true, 'password':false, 'confirm-password':false};
-    var handleBlur=()=>{}
+    // var handleBlur=()=>{}
     var isFill=(value)=>{
         return (value||oninput==true)? undefined :'Không được để trống trường này!' 
     } 
@@ -61,38 +61,40 @@ function Login() {
         }
         if(state.selector=='submit')
         {
-            var requireElements = document.querySelectorAll('.require');
-            requireElements.forEach((checkElement)=>{
-                var messageElement=checkElement.parentElement.querySelector('.form-message');
-                
-                var rule='isFill';
-                
-                if(checkElement.id=='confirm-password'){
-                    var passWordElement=document.querySelector('#password');
-                    if(checkElement.value){
-                        var rule='isConfirm';
-                    Validate(checkElement, rule, messageElement, true, false, passWordElement.value);
+            var submitElement = document.querySelector('#submit');
+            submitElement.onclick=()=>{
+                var checkElements = document.querySelectorAll('.require');
+                checkElements.forEach((checkElement)=>{
+                    var messageElement=checkElement.parentElement.querySelector('.form-message');
+                    var rule='isFill';
+                    if(checkElement.id=='confirm-password'){
+                        var passWordElement=document.querySelector('#password');
+                        if(checkElement.value){
+                            var rule='isConfirm';
+                        Validate(checkElement, rule, messageElement, true, false, passWordElement.value);
+                        }else{
+                            Validate(checkElement, rule, messageElement, true, false);
+                        }
+                        
                     }else{
                         Validate(checkElement, rule, messageElement, true, false);
                     }
+                })
+                if(submitValid){
                     
+                    // 
+                    console.log('Đăng nhập thành công!')
                 }else{
-                    Validate(checkElement, rule, messageElement, true, false);
+                    
                 }
-            })
-            if(!submitValid){
-                
-            }else{
-                alert('Đăng ký thành công!')
             }
         }else{
             state.rules.forEach((rule)=>{
                 var checkElement=document.querySelector(`#${state.selector}`);
                 var messageElement=checkElement.parentElement.querySelector('.form-message');
-                checkElement.onblur=function(){
+                checkElement.onblur=()=>{
                     var oninput=false;
                     Validate(checkElement, rule, messageElement, true, oninput);
-
                     var requireElements = document.querySelectorAll('.require');
                     requireElements.forEach((checkElement)=>{
                         var messageElement=checkElement.parentElement.querySelector('.form-message');
@@ -103,8 +105,9 @@ function Login() {
                             var passWordElement=document.querySelector('#password');
                             if(checkElement.value){
                                 var rule='isConfirm';
-                            Validate(checkElement, rule, messageElement, false, false, passWordElement.value);
-                            }else{
+                                Validate(checkElement, rule, messageElement, false, false, passWordElement.value);
+                            }
+                            else{
                                 Validate(checkElement, rule, messageElement, false, false);
                             }
                             
@@ -117,9 +120,8 @@ function Login() {
                         submitValid=true;
                         submitElement.classList.remove('hover:bg-red-600');
                     }
-
                 }
-                checkElement.oninput=function(){
+                checkElement.oninput=()=>{
                     var oninput=true;
                     Validate(checkElement, rule, messageElement, true, oninput)
                 } 
@@ -148,10 +150,9 @@ function Login() {
                             <input 
                             id="user" 
                             onFocus={e=>{if(!e.target.value)setState({selector:'user', rules:['isFill',]})}}
-                            onBlur={handleBlur}
+                            // onBlur={handleBlur}
                             type="text" 
                             className="border py-3 w-[500px] pl-3 outline-none focus:outline-[#999999] require"
-                            
                             >
                                 
                             </input>
@@ -166,7 +167,7 @@ function Login() {
                             </label><br />
                             <input 
                             onFocus={e=>{if(!e.target.value)setState({selector:'email', rules:['isEmail',]})}}
-                            onBlur={handleBlur}
+                            // onBlur={handleBlur}
                             id="email" type="text" className="border py-3 w-[500px] pl-3 outline-none focus:outline-[#999999]"></input>
                             <div className="form-message"></div>
 
@@ -181,7 +182,7 @@ function Login() {
                             id="tel" 
                             type="text" 
                             onFocus={e=>{if(!e.target.value)setState({selector:'tel', rules:['isFill',]})}}
-                            onBlur={handleBlur}
+                            // onBlur={handleBlur}
                             className="border py-3 w-[500px] pl-3 outline-none focus:outline-[#999999] require">
 
                             </input>
@@ -196,7 +197,7 @@ function Login() {
                             </label><br />
                             <input id="password" 
                             onFocus={e=>{if(!e.target.value)setState({selector:'password', rules:['isFill',]})}}
-                            onBlur={handleBlur}
+                            // onBlur={handleBlur}
                             type="password" 
                             className="border py-3 w-[500px] pl-3 outline-none focus:outline-[#999999] require">
 
@@ -213,7 +214,7 @@ function Login() {
                             <input 
                             id="confirm-password"
                             onFocus={e=>{if(!e.target.value)setState({selector:'confirm-password', rules:['isFill',]})}}
-                            onBlur={handleBlur}
+                            // onBlur={handleBlur}
                             type="password" 
                             className="border py-3 w-[500px] pl-3 outline-none focus:outline-[#999999] require">
 
@@ -223,7 +224,8 @@ function Login() {
                         </div>
                         <div className="flex items-center justify-between">
                             <div>Bạn đã có tài khoản?<Link to='/Login' className="text-[#e80000] ml-[10px]">Đăng nhập</Link></div>
-                            <div id="submit" onClick={e=>{setState({selector:'submit', rules:[]})}} className="flex rounded border w-32 h-14 text-white bg-black hover:bg-blue-600 hover:cursor-pointer ease-in duration-100 transition-colors "><span className=" m-auto">Đăng ký</span></div>
+                            <div id="submit" 
+                            onMouseOver={e=>{setState({selector:'submit', rules:[]})}} className="flex rounded border w-32 h-14 text-white bg-black hover:bg-blue-600 hover:cursor-pointer ease-in duration-100 transition-colors "><span className=" m-auto">Đăng ký</span></div>
                         </div>
                     </form>
 
