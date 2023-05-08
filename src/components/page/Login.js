@@ -3,9 +3,9 @@ import Header from "../header";
 import {useState} from 'react';
 import {Link } from 'react-router-dom';
 function Login() {
-    const d = new Date();
-    let time = d.getTime();
-    const [state, setState] = useState({selector:'', rules:[]});
+    
+    const [state, setState] = useState({selector:'', rules:[]});    //giá trị khởi tạo với mảng rules rỗng để tránh lỗi khi queryselector lần đầu
+
     var isAll_Valid={'user':false, 'password':false};
     // var handleBlur=()=>{}
     var isFill = function(value){
@@ -14,7 +14,8 @@ function Login() {
     if(state!=''){
         var submitValid=false;
         var submitElement=document.querySelector('#submit');
-        function Validate(checkElement, rule, messageElement,isInner, oninput){
+
+        function Validate(checkElement, rule, messageElement,isInner, oninput){ //Hàm Valiadte
             switch(rule){
                 case 'isFill':{
                     var messageValue=isFill(checkElement.value, oninput);
@@ -36,7 +37,7 @@ function Login() {
             }
         }
         
-        if(state.selector=='submit')
+        if(state.selector=='submit')    //xử lí khi click submit thì check tất cả fields
         {
             var submitElement = document.querySelector('#submit');
             submitElement.onclick=()=>{
@@ -58,26 +59,26 @@ function Login() {
             
             
         }
-        else{
+        else{       //xử lí khi focus các trường require
             state.rules.forEach((rule)=>{
                 var checkElement=document.querySelector(`#${state.selector}`);
                 var messageElement=checkElement.parentElement.querySelector('.form-message');
                 checkElement.onblur=()=>{
-                    // console.log(1);
+                    console.log(1);
                     var oninput=false;
                     Validate(checkElement, rule, messageElement,true, oninput);
 
-                    var checkElements = document.querySelectorAll('.require');
+                    var checkElements = document.querySelectorAll('.require');  // Chuyển xanh nút submit khi blur ra ngoài thì check để đổi màu
                     checkElements.forEach((checkElement)=>{
                         var rule='isFill';
                         Validate(checkElement, rule, messageElement,false, false);
-                    }) // Chuyển xanh nút submit
+                    }) 
                     if(isAll_Valid['user'] &&isAll_Valid['password']){
                         submitValid=true;
                         submitElement.classList.remove('hover:bg-red-600');
                     }
                 }
-                checkElement.oninput=()=>{
+                checkElement.oninput=()=>{  //kiểm tra xem có đang nhập dữ liệu hay không nếu có thì bỏ qua kiểm tra
                     var oninput=true;
                     Validate(checkElement, rule, messageElement,true, oninput)
                 } 
@@ -123,7 +124,8 @@ function Login() {
                         <div className="flex items-center justify-between">
                             <div>Bạn chưa có tài khoản?<Link to='/Signup' className="text-[#e80000] ml-[10px]">Đăng ký ngay</Link></div>
                             <div id="submit" 
-                            onMouseOver={e=>{setState({selector:'submit', rules:[]})}} className="flex rounded border w-32 h-14 text-white bg-black hover:bg-blue-600 hover:cursor-pointer ease-in duration-100 transition-colors "><span className=" m-auto">Đăng nhập</span></div>
+                            onMouseOver={e=>{setState({selector:'submit', rules:[]})}}  //khi di chuột lên nút submit thì re-render để lần đầu vào page và click submit thì listen event vẫn nhận được
+                            className="flex rounded border w-32 h-14 text-white bg-black hover:bg-blue-600 hover:cursor-pointer ease-in duration-100 transition-colors "><span className=" m-auto">Đăng nhập</span></div>
                         </div>
                     </form>
 
