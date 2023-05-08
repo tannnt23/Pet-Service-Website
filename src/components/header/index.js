@@ -5,7 +5,7 @@ import { FaSearch } from 'react-icons/fa'
 import { FaCartPlus } from 'react-icons/fa'
 import { FaPhone } from 'react-icons/fa'
 import { FaChevronDown } from 'react-icons/fa'
-
+import CartNotification from './CartNotification';
 function Header() {
     return (
         <div className=' ' >
@@ -19,19 +19,20 @@ function Header() {
 
                         <div className=' flex px-4 items-center'>217 Lâm Văn Bền, P. Bình Thuận, Q.7, HCM</div>
                     </div>
-                    <div className='flex justify-between  '>
+                    <div className='flex justify-between'>
                         {/* search*/}
-                        <button className='search -2  px-4 hover:bg-sky-700'>
+                        <button className='search-2  px-4 hover:bg-sky-700'>
                             <FaSearch className='' />
                         </button>
                         {/* gio hang*/}
-                        <button className='cart px-4 hover:bg-sky-700' >
+
+                        <button className='cart px-4 hover:bg-sky-700'>
                             <FaCartPlus className='' />
                         </button>
-                        <a href='' className='self-center bg-blue-800 p-2 rounded-lg hover:bg-blue-600'>Log in</a>
-                        <a href='' className='self-center  p-2 rounded-lg hover:bg-sky-700'> Sign Up</a>
-
-
+                
+                    
+                        <a href='' className='self-center  bg-blue-800 p-2 rounded-lg hover:bg-blue-600'>Log in</a>
+                        <a href='' className='self-center p-2 rounded-lg hover:bg-sky-700'> Sign Up</a>
                     </div>
                 </header>
             </div>
@@ -81,7 +82,7 @@ function Header() {
 
                 </div>
             </div>
-
+            {/* <CartNotification/> */}
         </div >
     )
 }
