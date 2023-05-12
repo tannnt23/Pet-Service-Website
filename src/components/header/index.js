@@ -5,8 +5,12 @@ import { FaSearch } from 'react-icons/fa'
 import { FaCartPlus } from 'react-icons/fa'
 import { FaPhone } from 'react-icons/fa'
 import { FaChevronDown } from 'react-icons/fa'
-import CartNotification from './CartNotification';
+// import { Validate } from './main.js'
+import CartNotification from '../page/CartNotification';
+import { useState } from 'react';
 function Header() {
+    const [show, setShow] = useState(false)
+
     return (
         <div className=' ' >
             <div className='flex justify-center bg-slate-600 '>
@@ -26,16 +30,17 @@ function Header() {
                         </button>
                         {/* gio hang*/}
 
-                        <button className='cart px-4 hover:bg-sky-700'>
+                        <button onClick={() => setShow(!show)} className='cart px-4 hover:bg-sky-700 relative'>
                             <FaCartPlus className='' />
+                            <span className='cart-notice absolute pt-[1px] pb-[2px] px-[5px] bg-[#23a455] text-white text-[8px] font-normal rounded-[100%] leading-[10px] top-[3px] right-[5px] text-center'>3</span>
+                           
                         </button>  
-
+                        
                         <Link to='/Login' className='self-center bg-blue-800 p-2 rounded-lg hover:bg-blue-600'>Log in</Link>
                         <Link to='/Signup' className='self-center  p-2 rounded-lg hover:bg-sky-700'> Sign Up</Link>
-
-
                     </div>
                 </header>
+                {show && <CartNotification show = {show} setShow = {setShow}/>}
             </div>
 
             <div className=' flex justify-center py-5 '>
@@ -44,9 +49,7 @@ function Header() {
                         <div>
                             <img className='w-48' src='https://petservicehcm.com/wp-content/uploads/2019/11/Pet_logo.png.webp' alt='Pet logo'></img>
                         </div>
-
                         {/* page*/}
-
                         <Link to='/' className='p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500 '>TRANG CHỦ</Link>
                         <Link to='/About' className='p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500 '>GIỚI THIỆU</Link>
                         <Link to='' className='p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500  relative  group  '>DỊCH VỤ
@@ -64,28 +67,24 @@ function Header() {
                                 <li className=' left-0  p-3 hover:text-teal-500  '><Link to='/TreatmentProduct'>SẢN PHẨM ĐIỀU TRỊ</Link></li>
                             </ul>
                             <FaChevronDown className='self-center pl-1 font-none inline' /></Link>
-                        <Link to='/Contact' className='p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500 group relative'>LIÊN HỆ
+                        <Link to='/Contact' className='p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500 group relative' 
+                        // onClick={function(){
+                        //     setTimeout(Validate.Validator, 3000)
+                        // }
+                        // }
+                        >LIÊN HỆ
                         </Link>
-
-
                         {/* ONLINE BOOKING*/}
                         <Link to='/OnlineBooking' className='flex '>
                             <button className='  p-1.5 bg-black self-center text-white rounded-full hover:bg-sky-800 px-4  '>
                                 ONLINE BOOKING
-
                             </button>
-
                         </Link>
-
-
-
                     </div>
 
                 </div>
             </div>
-            {/* <CartNotification/> */}
         </div >
     )
 }
-
 export default Header;

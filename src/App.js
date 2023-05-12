@@ -11,9 +11,7 @@ import HygieneProduct from './components/page/HygieneProduct.js'
 import TreatmentProduct from './components/page/TreatmentProduct.js';
 import About from './components/page/About.js';
 import OnlineBooking from './components/page/OnlineBooking.js';
-
-
-
+import ViewCart from './components/page/ViewCart.js';
 function App() {
   return (
     <div className='app'>
@@ -27,6 +25,7 @@ function App() {
         <Route path='/OnlineBooking' element={<OnlineBooking />} /> {/* trang liên hệ */}
         <Route path='/Login' element={<Login />} /> {/* trang login*/}
         <Route path='/Signup' element={<Signup />} /> {/* trang signup*/}
+        <Route path='/ViewCart' element={<ViewCart/>} />
       </Routes>
      
     </div>
