@@ -1,8 +1,5 @@
 // sản phẩm vệ sinh
 
-
-// thực phẩm thú cưng
-
 function Hygiene() {
     return (
         <div className="flex justify-center mt-8">

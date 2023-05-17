@@ -22,13 +22,13 @@ function App() {
         <Route path='/About' element={<About />} /> {/* trang giới thiệu */}
         <Route path='/FoodProduct' element={<FoodProduct />} /> {/*  trang store thực phẩm thú cưng*/}
         <Route path='/HygieneProduct' element={<HygieneProduct />} /> {/*  trang store sản phẩm vệ sinh thú cưng*/}
-        <Route path='/TreatmentProduct' element={<TreatmentProduct />} /> {/*  trang store sản phẩm điều trịthú cưng*/}
+        <Route path='/TreatmentProduct' element={<TreatmentProduct />} /> {/*  trang store sản phẩm điều trị thú cưng*/}
         <Route path='/Contact' element={<Contact />} /> {/* trang liên hệ */}
-        <Route path='/OnlineBooking' element={<OnlineBooking />} /> {/* trang liên hệ */}
+        <Route path='/OnlineBooking' element={<OnlineBooking />} /> {/* trang đặt lịch */}
         <Route path='/Login' element={<Login />} /> {/* trang login*/}
         <Route path='/Signup' element={<Signup />} /> {/* trang signup*/}
       </Routes>
-     
+
     </div>
   )
 }

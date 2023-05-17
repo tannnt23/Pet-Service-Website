@@ -1,6 +1,7 @@
-import Booking from "../Booking";
+
 import BannerOB from "../banner/BannerOB";
 import Footer from "../footer";
+import Booking from "../handleFunction/Booking";
 import Header from "../header";
 
 function OnlineBooking() {

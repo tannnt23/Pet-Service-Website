@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  mode:"jit",
+  mode: "jit",
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
@@ -11,6 +11,7 @@ module.exports = {
         '1220': '76rem',
         '264': '16.5rem',
         '250': '15.625rem',
+        '660': '41.25rem',
       },
       height: {
         '300': '18.75rem',
@@ -21,12 +22,12 @@ module.exports = {
       colors: {
         'regal-blue': '#273171',
       },
-      spacing:{
-        '360':'360px',
+      spacing: {
+        '360': '360px',
         // '78':'78px',
       },
-      fontFamily:{
-        'sans':['Montserrat']
+      fontFamily: {
+        'sans': ['Montserrat']
       }
     },
   },
