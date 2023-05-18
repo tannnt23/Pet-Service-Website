@@ -7,7 +7,6 @@ import { FaPhone } from 'react-icons/fa'
 import { FaChevronDown } from 'react-icons/fa'
 import CartNotification from '../page/CartNotification';
 import { useState } from 'react';
-import {useState} from 'react';
 function Header() {
     const [show, setShow] = useState(false)
     const [state, setState] = useState('');
