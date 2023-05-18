@@ -44,7 +44,6 @@ class Contact extends Component {
                     // Xử lý trường hợp blur khỏi input
                     inputElement.onblur = function () {
                         validate(inputElement, rule)
-                        console.log(123)
                     }
 
                     // Xử lý khi bắt đầu nhập thì ẩn errorMess
@@ -52,7 +51,6 @@ class Contact extends Component {
                         var errorElement = inputElement.parentElement.querySelector('.form-message')
                         errorElement.innerText='';
                         inputElement.style.border = '2px solid #7787ea'
-
                     }
                 }
             })
@@ -82,7 +80,7 @@ class Contact extends Component {
                 <Header />
                 <div className="Contact">
                     {/* chữ và form */}
-                    <div className="flex mx-[156px] mt-[50px]">
+                    <div className="flex mx-[346px] mt-[50px]">
                         {/* chữ */}
                         <div className="mr-[70px]">
                             <div className="mb-12">
@@ -121,37 +119,46 @@ class Contact extends Component {
                             <form  action="" method="POST" id="form-1">
                                 <div className="mb-[25px]">
                                     <label htmlFor="fullName" className="text-[18px] font-semibold">Họ Tên<span className="text-[#e80000] font-extrabold">*</span></label><br/>
-                                    <input id="fullName" type="text" onBlur={this.onBlurEvent} className="border-2 py-3 pr-80 pl-3 outline-none focus:border-[#7787ea]"></input>
+                                    <input id="fullName" type="text" onBlur={this.onBlurEvent} onFocus={this.onBlurEvent} className="border-2 py-3 pr-80 pl-3 outline-none focus:border-[#7787ea]"></input>
                                     <div className="form-message text-[#e80000]"></div>
                                 </div>
 
                                 <div>
                                     <div className="mb-[25px]">
                                         <label htmlFor="tel" className="text-[18px] font-semibold">Số Điện Thoại</label><br/>
-                                        <input id="tel" type="text" onBlur={this.onBlurEvent} className="border-2 py-3 pr-80 pl-3 outline-none focus:border-[#7787ea]"></input>
+                                        <input id="tel" type="text" className="border-2 py-3 pr-80 pl-3 outline-none focus:border-[#7787ea]"></input>
                                     </div>
                                     <div className="mb-[25px]">
                                         <label htmlFor="email" className="text-[18px] font-semibold">Email<span className="text-[#e80000] font-extrabold">*</span></label><br/>
-                                        <input id="email" type="email" onBlur={this.onBlurEvent} className="border-2 py-3 pr-80 pl-3 outline-none focus:border-[#7787ea]"></input>
+                                        <input id="email" type="email" onBlur={this.onBlurEvent} onFocus={this.onBlurEvent} className="border-2 py-3 pr-80 pl-3 outline-none focus:border-[#7787ea]"></input>
                                         <div className="form-message text-[#e80000]"></div>
                                     </div>
                                 </div>
 
                                 <div className="mb-[25px]">
                                     <label htmlFor="mess" className="text-[18px] font-semibold">Lời Nhắn<span className="text-[#e80000] font-extrabold">*</span></label><br/>
-                                    <textarea id="mess" className="w-full border-2 outline-none pl-3 h-[200px] focus:border-[#7787ea]" placeholder="PSH luôn lắng nghe mọi đóng góp quý báu và không ngừng nâng cấp cải thiện chất lượng dịch vụ nhằm phục vụ quý khách hàng một cách tốt nhất."></textarea>
+                                    <textarea id="mess" onBlur={this.onBlurEvent} onFocus={this.onBlurEvent} className="w-full border-2 outline-none pl-3 h-[200px] focus:border-[#7787ea]" placeholder="PSH luôn lắng nghe mọi đóng góp quý báu và không ngừng nâng cấp cải thiện chất lượng dịch vụ nhằm phục vụ quý khách hàng một cách tốt nhất."></textarea>
                                     <div className="form-message text-[#e80000] mt-[-5px]"></div>
                                 </div>
 
                                 <div>
-                                    <input value="Gửi yêu cầu" type="submit" className="border w-32 h-14 text-white bg-black hover:bg-[#c4c4c4] hover:cursor-pointer ease-in duration-100 transition-colors"></input>
+                                    <input 
+                                    value="Gửi yêu cầu" 
+                                    type="submit" 
+                                    className="border w-32 h-14 text-white bg-black hover:bg-[#c4c4c4] hover:cursor-pointer ease-in duration-100 transition-colors"
+                                    onClick={(e) =>
+                                    {
+                                        e.preventDefault()
+                                    }}
+                                    />
+                                        
                                 </div>
 
                             </form>
                         </div>
                     </div>
                     {/* google map */}
-                    <div className="mx-[156px] my-[75px]">
+                    <div className="mx-[346px] my-[75px]">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.2312404166914!2d106.80047917495881!3d10.870008889284517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527587e9ad5bf%3A0xafa66f9c8be3c91!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2jhu4cgVGjDtG5nIHRpbiAtIMSQSFFHIFRQLkhDTQ!5e0!3m2!1svi!2s!4v1682007015702!5m2!1svi!2s" width={1208} height={450} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>

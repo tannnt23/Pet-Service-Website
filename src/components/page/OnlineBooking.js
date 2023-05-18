@@ -1,4 +1,4 @@
-import Booking from "../Booking";
+import Booking from "./Booking";
 import BannerOB from "../banner/BannerOB";
 import Footer from "../footer";
 import Header from "../header";

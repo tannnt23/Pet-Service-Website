@@ -28,6 +28,7 @@ module.exports = {
       fontFamily:{
         'sans':['Montserrat']
       },
+
       // keyframes:{
       //   'scaleUp':{
       //     // '0%,100%': {transform: 'scale(0)'},
@@ -62,12 +63,56 @@ module.exports = {
           '99%':{transform: 'scaleX(0%)'},
           '100%': {display:'none'}
         },
+        SlideInRight: {
+          'from' :{
+            opacity: '0',
+            transform: 'translateX(100%)'
+          },
+          'to' :{
+            opacity: '1',
+            transform: 'translateX(0)'
+          }
+        },
+        SildeInLeft: {
+          'from' :{
+            opacity: '1',
+            // transform: 'translateX(0)'
+          },
+          'to' :{
+            opacity: '0',
+            transform: 'translateX(100%)'
+          }
+        },
+        DisplaySlowly: {
+          'from' :{
+            opacity: '0',
+            // 'background-color': 'white'
+          },
+          'to' :{
+            opacity: '1',
+            'background-color': '#00000033'
+          }
+        },
+        HiddenSlowly: {
+          'from' :{
+            opacity: '1',
+            'background-color': '#00000033'
+          },
+          'to' :{
+            opacity: '0'
+          }
+        }
+
       },
       animation: {
         scaleX: 'scaleX 0.35s ease-in-out 1',
         scaleY: 'scaleY 0.5s ease-in-out 0s 1',
         searchInputIn:'searchInputIn 0.4s linear 1',
         searchInputOut:'searchInputOut 0.4s linear 1',
+        'Slideinright' : 'SlideInRight ease 0.3s',
+        'Slideinleft'  : 'SildeInLeft ease 0.3s',
+        'Displayslowly': 'DisplaySlowly linear 0.2s forwards',
+        'Hiddenslowly' : 'HiddenSlowly linear 0.2s'
       }
 
 

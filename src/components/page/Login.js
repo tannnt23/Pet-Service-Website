@@ -3,11 +3,9 @@ import Footer from "../footer";
 import Header from "../header";
 import {useState} from 'react';
 import {Link } from 'react-router-dom';
-function Login() {
-    
+function Login() {   
     const [state, setState] = useState({selector:'', rules:[]});    //giá trị khởi tạo với mảng rules rỗng để tránh lỗi khi queryselector lần đầu
-    
-    // var isAllValid={'user':false, 'password':false};
+
     var isAllValid={};
     // var handleBlur=()=>{}
     var isFill = function(value){
@@ -16,7 +14,6 @@ function Login() {
     if(state!=''){
         var submitValid=false;
         var submitElement=document.querySelector('#submit');
-
         function Validate(checkElement, rule, messageElement,isInner, oninput){ //Hàm Valiadte
             switch(rule){
                 case 'isFill':{
@@ -39,7 +36,6 @@ function Login() {
                 }
             }
         }
-        
         if(state.selector=='submit')    //xử lí khi click submit thì check tất cả fields
         {
             var submitElement = document.querySelector('#submit');
@@ -57,7 +53,7 @@ function Login() {
                 }else{
                     
                 }
-            }    
+            }
         }
         else{       //xử lí khi focus các trường require
             isAllValid[state.selector]=false;
@@ -87,16 +83,13 @@ function Login() {
                 } 
             });
         }
-    }else{}
-    
-    
+    }
     return (
         <div>
             <Header />
 
                 <div className=" flex flex-col items-center mt-[60px] mb-[260px]">
                     <div className="font-bold text-[34px] mb-[40px] ">ĐĂNG NHẬP</div>
-
                     <form action="" method="POST" id="form-login" >
                         <div className="mb-3">Các trường được đánh dấu <span className="text-[#e80000] text-[18px] font-extrabold">*</span> là bắt buộc</div>
                             <div className="mb-[25px]">
@@ -106,22 +99,17 @@ function Login() {
                             // onBlur={handleBlur}
                             id="user" type="text"  className="border py-3 w-[500px] pl-3 outline-none focus:outline-[#999999] require"></input>
                             <div className="form-message"></div>
-
                         </div>
                             
                         <div className="mb-[25px]">
-
                             <label htmlFor="password"  className="text-[18px] font-semibold">Mật khẩu<span className="text-[#e80000] font-extrabold">*</span></label><br />
                             <input id="password" placeholder="******" type="password" className="border py-3 w-[500px] pl-3 outline-none focus:outline-[#999999] require" 
                             onFocus={e=>{if(!e.target.value)setState({selector:'password', rules:['isFill',]})}}
                             // onBlur={handleBlur}
-                            >
-                                
+                            > 
                             </input>
                             <div className="form-message"></div>
-
                         </div>
-                    
                         <div className="flex items-center justify-between">
                             <div>Bạn chưa có tài khoản?<Link to='/Signup' className="hover:font-medium text-[#e80000] ml-[10px]">Đăng ký ngay</Link></div>
                             <div id="submit" 
@@ -129,14 +117,10 @@ function Login() {
                             className="flex rounded border w-32 h-14 text-white bg-black hover:bg-blue-600 hover:cursor-pointer ease-in duration-150 origin-center"><span className=" m-auto">Đăng nhập</span></div>
                         </div>
                     </form>
-
                 </div>
-
 
             <Footer/>
         </div>
-
-
     )
 }
 export default Login;
