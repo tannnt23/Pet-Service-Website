@@ -51,7 +51,7 @@ function Header() {
                     <div className='flex justify-between'>
                         {/* search*/}
                         <div className='flex items-center'>
-                            <input id='search-input' className='w-[300px] hidden h-[100%] pl-[10px] bg-white border-[1px] border-[#142391] outline-0 rounded-l-[20px] border-r-0 origin-right' 
+                            <input id='search-input' className='w-[300px] hidden h-[100%] pl-[10px] bg-white border-[1px] border-[#142391] outline-0 rounded-l-[20px] border-r-0 origin-right text-black' 
                             type='text' 
 
                             placeholder='Search...'>
