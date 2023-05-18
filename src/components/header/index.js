@@ -5,33 +5,68 @@ import { FaSearch } from 'react-icons/fa'
 import { FaCartPlus } from 'react-icons/fa'
 import { FaPhone } from 'react-icons/fa'
 import { FaChevronDown } from 'react-icons/fa'
-
-function Header() {
+import {useState} from 'react';
+function Header() { 
+    
+    const [state, setState] = useState('');
+    var isSearchInputHidden=true;
+    if(state!=''){
+        var searchBtnElement=document.querySelector('#search-btn');
+        
+        var searchInputElement=document.querySelector(state);
+        searchBtnElement.onclick=()=>{
+            if(isSearchInputHidden){
+                searchInputElement.classList.remove('hidden');
+                searchInputElement.classList.add('animate-searchInputIn');
+                searchInputElement.classList.remove('animate-searchInputOut');
+                isSearchInputHidden=false;
+            }
+            else{
+                searchInputElement.classList.add('animate-searchInputOut');
+                searchInputElement.classList.remove('animate-searchInputIn');
+                
+                
+                setTimeout(() => {
+                    searchInputElement.classList.add('hidden');
+                }, 380);
+                isSearchInputHidden=true;
+            }
+        }
+    }
     return (
+        
+
         <div className=' ' >
-            <div className='flex justify-center bg-slate-600 '>
+            <div className='flex justify-center bg-gradient-[80deg] from-[#3D51AC] to-[#232c72] to-15% bg-transparent sm:bg-gradient-to-r '>
                 <header className='flex  text-white  justify-between  text-sm w-1220   '>
                     <div className='flex justify-between'>
                         <button>
                             <FaPhone />
                         </button>
-                        <div className='  flex px-4 items-center '>0898520760</div>
+                        <div className='flex px-4 items-center'>0898520760</div>
 
-                        <div className=' flex px-4 items-center'>217 Lâm Văn Bền, P. Bình Thuận, Q.7, HCM</div>
+                        <div className='flex px-4 items-center'>217 Lâm Văn Bền, P. Bình Thuận, Q.7, HCM</div>
                     </div>
                     <div className='flex justify-between  '>
                         {/* search*/}
-                        <button className='search -2  px-4 hover:bg-sky-700'>
-                            <FaSearch className='' />
-                        </button>
+                        <div className='flex items-center'>
+                            <input id='search-input' className='w-[300px] hidden h-[100%] pl-[10px] bg-white border-[1px] border-[#142391] outline-0 rounded-l-[20px] border-r-0 origin-right' 
+                            type='text' 
+
+                            placeholder='Search...'>
+                            </input>
+
+                            <button id='search-btn' className='search px-4 hover:bg-blue-600 rounded h-[100%]'
+                            onFocus={e=>{setState('#search-input')}}>
+                                <FaSearch className='' />
+                            </button>    
+                        </div>
                         {/* gio hang*/}
-                        <button className='cart px-4 hover:bg-sky-700' >
+                        <button className='cart px-4 hover:bg-blue-600 rounded' >
                             <FaCartPlus className='' />
                         </button>
-                        <Link to='/Login' className='self-center bg-blue-800 p-2 rounded-lg hover:bg-blue-600'>Log in</Link>
-                        <Link to='/Signup' className='self-center  p-2 rounded-lg hover:bg-sky-700'> Sign Up</Link>
-
-
+                        <Link to='/Login' id='login-btn'  className='self-center p-2 rounded hover:bg-blue-600'>Log in</Link>
+                        <Link to='/Signup' id='sign-btn' className='self-center  p-2 rounded hover:bg-blue-600'> Sign Up</Link>
                     </div>
                 </header>
             </div>
@@ -45,30 +80,30 @@ function Header() {
 
                         {/* page*/}
 
-                        <Link to='/' className='p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500 '>TRANG CHỦ</Link>
-                        <Link to='/About' className='p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500 '>GIỚI THIỆU</Link>
-                        <Link to='' className='p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500  relative  group  '>DỊCH VỤ
+                        <Link to='/' className='p-1.5 self-center font-bold text-neutral-600 hover:text-blue-600 '>TRANG CHỦ</Link>
+                        <Link to='/About' className='p-1.5 self-center font-bold text-neutral-600 hover:text-blue-600 '>GIỚI THIỆU</Link>
+                        <Link to='' className='p-1.5 self-center font-bold text-neutral-600 flex items-center hover:text-blue-600  relative  group  '>DỊCH VỤ
                             <ul className=' hidden w-264 group-hover:block  z-10 absolute  top-full rounded-lg text-sm text-cyan-900 bg-slate-100 border border-solid border-[#273172] pt-2 '>
-                                <li className=' left-0  p-3 hover:text-teal-500 '> <Link to=''>THÚ Y TẠI NHÀ</Link></li>
-                                <li className=' left-0  p-3 hover:text-teal-500  '><Link to=''>TẮM - VỆ SINH TẠI NHÀ</Link></li>
-                                <li className=' left-0  p-3 hover:text-teal-500  '><Link to=''>CẮT- TỈA LÔNG TẠI NHÀ</Link></li>
-                                <li className=' left-0  p-3 hover:text-teal-500  '><Link to=''>DẮT CHÓ ĐI DẠO</Link></li>
+                                <li className=' left-0  p-3 hover:text-blue-600 '> <Link to=''>THÚ Y TẠI NHÀ</Link></li>
+                                <li className=' left-0  p-3 hover:text-blue-600  '><Link to=''>TẮM - VỆ SINH TẠI NHÀ</Link></li>
+                                <li className=' left-0  p-3 hover:text-blue-600  '><Link to=''>CẮT- TỈA LÔNG TẠI NHÀ</Link></li>
+                                <li className=' left-0  p-3 hover:text-blue-600  '><Link to=''>DẮT CHÓ ĐI DẠO</Link></li>
                             </ul>
                             <FaChevronDown className='self-center pl-1 font-none inline' /></Link>
-                        <Link to='' className=' p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500  relative group '>CỬA HÀNG
+                        <Link to='' className=' p-1.5 self-center font-bold text-neutral-600 hover:text-blue-600  relative group flex items-center'>CỬA HÀNG
                             <ul className=' hidden w-250 group-hover:block  z-10 absolute top-full rounded-lg text-sm text-cyan-900 bg-slate-100 border border-solid border-[#273172] pt-2 '>
-                                <li className=' left-0  p-3 hover:text-teal-500 '> <Link to='/FoodProduct'>THỰC PHẨM THÚ CƯNG</Link></li>
-                                <li className=' left-0  p-3 hover:text-teal-500  '><Link to='/HygieneProduct'>SẢN PHẨM VỆ SINH</Link></li>
-                                <li className=' left-0  p-3 hover:text-teal-500  '><Link to='/TreatmentProduct'>SẢN PHẨM ĐIỀU TRỊ</Link></li>
+                                <li className=' left-0  p-3 hover:text-blue-600 '> <Link to='/FoodProduct'>THỰC PHẨM THÚ CƯNG</Link></li>
+                                <li className=' left-0  p-3 hover:text-blue-600  '><Link to='/HygieneProduct'>SẢN PHẨM VỆ SINH</Link></li>
+                                <li className=' left-0  p-3 hover:text-blue-600  '><Link to='/TreatmentProduct'>SẢN PHẨM ĐIỀU TRỊ</Link></li>
                             </ul>
                             <FaChevronDown className='self-center pl-1 font-none inline' /></Link>
-                        <Link to='/Contact' className='p-1.5 self-center font-bold text-neutral-600 hover:text-teal-500 group relative'>LIÊN HỆ
+                        <Link to='/Contact' className='p-1.5 self-center font-bold text-neutral-600 hover:text-blue-600 group relative'>LIÊN HỆ
                         </Link>
 
 
                         {/* ONLINE BOOKING*/}
                         <Link to='/OnlineBooking' className='flex '>
-                            <button className='  p-1.5 bg-black self-center text-white rounded-full hover:bg-sky-800 px-4  '>
+                            <button className='  p-1.5 bg-black self-center text-white rounded-full hover:bg-blue-600 px-4  '>
                                 ONLINE BOOKING
 
                             </button>

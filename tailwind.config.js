@@ -27,7 +27,50 @@ module.exports = {
       },
       fontFamily:{
         'sans':['Montserrat']
+      },
+      // keyframes:{
+      //   'scaleUp':{
+      //     // '0%,100%': {transform: 'scale(0)'},
+      //     // '100%': {transform: 'scale(100)'},
+      //     '0%, 100%': { transform: 'rotate(-3deg)' },
+      //     '50%': { transform: 'rotate(3deg)' },
+      //   }
+      // },
+      // animation: {
+      //   // 'BannerIn': 'scaleUp 1s linear',
+      // },
+      //  animation: {
+      //   'spin-slow': 'spin 3s linear infinite',
+      // }
+
+      keyframes: {
+        scaleX: {
+          '0%': { transform: 'scaleX(0%)'},
+          '100%':{transform: 'scaleX(100%)'},
+        },
+        scaleY: {
+          '0%': { transform: 'scaleY(10%)'},
+          '70%': { transform: 'scaleY(10%)'},
+          '100%':{transform: 'scaleY(100%)'},
+        },
+        searchInputIn:{
+          '0%': { transform: 'scaleX(0%)'},
+          '100%':{transform: 'scaleX(100%)'},
+        },
+        searchInputOut:{
+          '0%': { transform: 'scaleX(100%)'},
+          '99%':{transform: 'scaleX(0%)'},
+          '100%': {display:'none'}
+        },
+      },
+      animation: {
+        scaleX: 'scaleX 0.35s ease-in-out 1',
+        scaleY: 'scaleY 0.5s ease-in-out 0s 1',
+        searchInputIn:'searchInputIn 0.4s linear 1',
+        searchInputOut:'searchInputOut 0.4s linear 1',
       }
+
+
     },
   },
   plugins: [],
