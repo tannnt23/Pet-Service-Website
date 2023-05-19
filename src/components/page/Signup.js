@@ -149,6 +149,7 @@ function Login() {
                             </label><br />
                             <input 
                             id="user" 
+                            placeholder='User123'
                             onFocus={e=>{if(!e.target.value)setState({selector:'user', rules:['isFill',]})}}
                             // onBlur={handleBlur}
                             type="text" 
@@ -166,6 +167,7 @@ function Login() {
                             className="text-[18px] font-semibold">Email
                             </label><br />
                             <input 
+                            placeholder='User@domain.com'
                             onFocus={e=>{if(!e.target.value)setState({selector:'email', rules:['isEmail',]})}}
                             // onBlur={handleBlur}
                             id="email" type="text" className="border py-3 w-[500px] pl-3 outline-none focus:outline-[#999999]"></input>
@@ -180,6 +182,7 @@ function Login() {
                             </label><br />
                             <input 
                             id="tel" 
+                            placeholder='#### ### ###'
                             type="text" 
                             onFocus={e=>{if(!e.target.value)setState({selector:'tel', rules:['isFill',]})}}
                             // onBlur={handleBlur}
@@ -192,10 +195,11 @@ function Login() {
                         <div className="mb-[25px]">
 
                             <label 
-                            htmlFor="password"  
+                            htmlFor="password"
                             className="text-[18px] font-semibold">Mật khẩu<span className="text-[#e80000] font-extrabold">*</span>
                             </label><br />
                             <input id="password" 
+                            placeholder='******'
                             onFocus={e=>{if(!e.target.value)setState({selector:'password', rules:['isFill',]})}}
                             // onBlur={handleBlur}
                             type="password" 
@@ -213,6 +217,7 @@ function Login() {
                             </label><br />
                             <input 
                             id="confirm-password"
+                            placeholder='******'
                             onFocus={e=>{if(!e.target.value)setState({selector:'confirm-password', rules:['isFill',]})}}
                             // onBlur={handleBlur}
                             type="password" 
@@ -223,9 +228,9 @@ function Login() {
 
                         </div>
                         <div className="flex items-center justify-between">
-                            <div>Bạn đã có tài khoản?<Link to='/Login' className="text-[#e80000] ml-[10px]">Đăng nhập</Link></div>
+                            <div>Bạn đã có tài khoản?<Link to='/Login' className="hover:font-medium text-[#e80000] ml-[10px]">Đăng nhập</Link></div>
                             <div id="submit" 
-                            onMouseOver={e=>{setState({selector:'submit', rules:[]})}} className="flex rounded border w-32 h-14 text-white bg-black hover:bg-blue-600 hover:cursor-pointer ease-in duration-100 transition-colors "><span className=" m-auto">Đăng ký</span></div>
+                            onMouseOver={e=>{setState({selector:'submit', rules:[]})}} className="flex rounded border w-32 h-14 text-white bg-black hover:bg-blue-600 hover:cursor-pointer ease-in duration-150 transition-colors "><span className=" m-auto">Đăng ký</span></div>
                         </div>
                     </form>
 
