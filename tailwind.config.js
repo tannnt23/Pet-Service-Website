@@ -28,6 +28,58 @@ module.exports = {
       },
       fontFamily: {
         'sans': ['Montserrat']
+      },
+      fontFamily: {
+        'sans': ['Montserrat']
+      },
+      keyframes: {
+        SlideInRight: {
+          'from': {
+            opacity: '0',
+            transform: 'translateX(100%)'
+          },
+          'to': {
+            opacity: '1',
+            transform: 'translateX(0)'
+          }
+        },
+        SildeInLeft: {
+          'from': {
+            opacity: '1',
+            // transform: 'translateX(0)'
+          },
+          'to': {
+            opacity: '0',
+            transform: 'translateX(100%)'
+          }
+        },
+        DisplaySlowly: {
+          'from': {
+            opacity: '0',
+            // 'background-color': 'white'
+          },
+          'to': {
+            opacity: '1',
+            'background-color': '#00000033'
+          }
+        },
+        HiddenSlowly: {
+          'from': {
+            opacity: '1',
+            'background-color': '#00000033'
+          },
+          'to': {
+            opacity: '0'
+          }
+        }
+
+      },
+      animation: {
+        'Slideinright': 'SlideInRight ease 0.3s',
+        'Slideinleft': 'SildeInLeft ease 0.3s',
+        'Displayslowly': 'DisplaySlowly linear 0.2s forwards',
+        'Hiddenslowly': 'HiddenSlowly linear 0.2s'
+
       }
     },
   },
