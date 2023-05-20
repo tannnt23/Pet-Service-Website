@@ -178,48 +178,56 @@ function Content() {
       {/* -- Home 4 */}
 
       {/* Home 5 */}
-      <div className="flex justify-center h-96 w-screen p-10">
-        <div className="flex justify-center  h-full w-screen">
-          <div className="">
-            <div className="flex w-48 h-6 ">
-              <div
-                id="line"
-                className="w-16 h-full mr-2 border-b-2 border-indigo-500"
-              ></div>
-              <div>
-                <p className=" text-lg font-semibold">Thông Tin</p>
+      <div className="flex-col justify-center h-2/3 p-6">
+        <div>
+          <div className="flex justify-center ">
+            <div>
+              <div className="flex w-1/3 h-6 ">
+                <div
+                  id="line"
+                  className="w-16 h-full mr-2 border-b-2 border-indigo-500"
+                ></div>
+                <div>
+                  <p className=" text-lg font-semibold">Thông Tin</p>
+                </div>
+              </div>
+              <div className="py-5 ">
+                <h1 className="text-6xl font-bold ">
+                  Spa Cho Thú Cưng <br />{" "}
+                  <i className="text-blue-500">Chuẩn 5 Sao</i>
+                </h1>
+              </div>
+              <div className="mt-5">
+                <button class="hover:bg-white text-md hover:text-blue-500 bg-blue-500 text-white transition font-semibold rounded-full p-4">
+                  Xem thêm
+                </button>
               </div>
             </div>
-            <div className="py-5 ">
-              <h1 className="text-6xl font-bold ">
-                Spa Cho Thú Cưng <br />{" "}
-                <i className="text-blue-500">Chuẩn 5 Sao</i>
-              </h1>
-            </div>
-            <div className="mt-5">
-              <button class="hover:bg-white text-md hover:text-blue-500 bg-blue-500 text-white transition font-semibold rounded-full p-4">
-                Xem thêm
-              </button>
+            <div className="">
+              <img
+                className="object-fill h-full w-full"
+                src="https://c4.wallpaperflare.com/wallpaper/598/261/137/dog-%C2%A0cat-%C2%A0poster-%C2%A0white-background-wallpaper-preview.jpg"
+                alt="Transparent Dog And Cat Png - Dog Cat And Ferret, Png Download@kindpng.com"
+              />
             </div>
           </div>
-          <div className="">
-            <img
-              className="object-fill h-full w-full"
-              src="https://c4.wallpaperflare.com/wallpaper/598/261/137/dog-%C2%A0cat-%C2%A0poster-%C2%A0white-background-wallpaper-preview.jpg"
-              alt="Transparent Dog And Cat Png - Dog Cat And Ferret, Png Download@kindpng.com"
-            />
+        </div>
+        <div className="h-16 flex justify-center bg-gray-200 text-xl place-items-center font-semibold">
+          <div className="flex justify-start">
+            <p className="mr-2">&hearts;</p>DỊCH VỤ CHUYÊN NGHIỆP
           </div>
+          <div className=" ml-4 text-blue-900">⚡NHANH CHÓNG</div>
         </div>
       </div>
 
-      {/* -- Home 5 */}
+      {/* ---Home 5--- */}
 
       {/* Home 6 */}
-      <div className="flex justify-center h-screen w-screen p-10">
+      <div className="flex justify-center p-10">
         {/* Left */}
         <div className="w-1/2 flex justify-end  ">
           <img
-            className="w-2/3 h-2/3 mr-5 border-4 border-white rounded shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]"
+            className=" mr-5 border-4 border-white rounded shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]"
             src="https://petservicehcm.com/wp-content/uploads/2020/12/z2250885338986_82392d19b13edd865a8b39f5d9ba8074-1440x1080.jpg.webp"
           />
         </div>
