@@ -213,6 +213,76 @@ function Content() {
       </div>
 
       {/* -- Home 5 */}
+
+      {/* Home 6 */}
+      <div className="flex justify-center h-screen w-screen p-10">
+        {/* Left */}
+        <div className="w-1/2 flex justify-end  ">
+          <img
+            className="w-2/3 h-2/3 mr-5 border-4 border-white rounded shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]"
+            src="https://petservicehcm.com/wp-content/uploads/2020/12/z2250885338986_82392d19b13edd865a8b39f5d9ba8074-1440x1080.jpg.webp"
+          />
+        </div>
+        {/* ---Left--- */}
+
+        {/* Right */}
+        <div className="w-1/2 flex justify-center ">
+          <div className="">
+            {/* title section*/}
+            <div className="flex w-96 h-6 ">
+              <div className="w-16 h-full mr-2 border-b-2 border-indigo-500"></div>
+              <div className="">
+                <p className=" text-lg font-semibold">Thông Tin & Bảng Giá</p>
+              </div>
+            </div>
+            <div className="py-5 ">
+              <h1 className="text-6xl font-bold ">
+                Dịch vụ cắt tỉa lông <br />{" "}
+                <i className="text-blue-500">tại nhà</i>
+              </h1>
+            </div>
+            <div className=" mt-4 flex justify-between  h-1/4">
+              {/* content section */}
+
+              <div>
+                {/* left */}
+                <ul className="text-md font-semibold italic space-y-4">
+                  <li>
+                    <span className="mr-2">&#10003;</span>Cắt gọn lông
+                  </li>
+                  <li>
+                    <span className="mr-2">&#10003;</span>Tỉa lông tạo kiểu
+                  </li>
+                  <li>
+                    <span className="mr-2">&#10003;</span>Cạo lông
+                  </li>
+                </ul>
+              </div>
+              <div className="flex justify-center items-center  w-1/2 h-1/2">
+                {/* right */}
+                <div>
+                  <h1 className="font-bold text-xl inline-block">
+                    Chỉ từ <br />
+                    <i className="text-blue-500 text-2xl">400.000đ</i>
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div className="">
+              {/* button group */}
+              <button class="bg-white text-sm text-blue-500 box-border border  border-blue-500 hover:bg-blue-500 hover:text-white transition font-bold rounded-full p-4">
+                Xem thêm
+              </button>
+              <button class="ml-2 hover:bg-white text-sm box-border hover:text-blue-500 bg-blue-500 text-white transition font-semibold rounded-full p-4">
+                Đặt lịch ngay
+              </button>
+            </div>
+          </div>
+        </div>
+        {/* ---Right--- */}
+      </div>
+
+      {/* -- Home 6 */}
     </div>
   );
 }
