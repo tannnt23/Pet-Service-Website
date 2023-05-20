@@ -154,7 +154,7 @@ function Content() {
 
       {/* Home 4 */}
 
-      <div class="flex h-96 justify-center items-center flex-col">
+      <div class="flex h-80 justify-center items-center flex-col">
         <div class="w-full h-screen bg-[url('https://www.catbreedslist.com/uploads/cat-pictures/british-shorthair-2.jpg')] bg-cover bg-center">
           <div class="w-full h-full flex justify-center items-center bg-blue-700/30 backdrop-brightness-50">
             <div class="text-white text-left mr-5">
@@ -176,6 +176,43 @@ function Content() {
       </div>
 
       {/* -- Home 4 */}
+
+      {/* Home 5 */}
+      <div className="flex justify-center h-96 w-screen p-10">
+        <div className="flex justify-center  h-full w-screen">
+          <div className="">
+            <div className="flex w-48 h-6 ">
+              <div
+                id="line"
+                className="w-16 h-full mr-2 border-b-2 border-indigo-500"
+              ></div>
+              <div>
+                <p className=" text-lg font-semibold">Thông Tin</p>
+              </div>
+            </div>
+            <div className="py-5 ">
+              <h1 className="text-6xl font-bold ">
+                Spa Cho Thú Cưng <br />{" "}
+                <i className="text-blue-500">Chuẩn 5 Sao</i>
+              </h1>
+            </div>
+            <div className="mt-5">
+              <button class="hover:bg-white text-md hover:text-blue-500 bg-blue-500 text-white transition font-semibold rounded-full p-4">
+                Xem thêm
+              </button>
+            </div>
+          </div>
+          <div className="">
+            <img
+              className="object-fill h-full w-full"
+              src="https://c4.wallpaperflare.com/wallpaper/598/261/137/dog-%C2%A0cat-%C2%A0poster-%C2%A0white-background-wallpaper-preview.jpg"
+              alt="Transparent Dog And Cat Png - Dog Cat And Ferret, Png Download@kindpng.com"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* -- Home 5 */}
     </div>
   );
 }
