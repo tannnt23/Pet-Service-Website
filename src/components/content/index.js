@@ -291,6 +291,111 @@ function Content() {
       </div>
 
       {/* -- Home 6 */}
+
+      {/* Home 7 */}
+      <div className="flex justify-center justify-evenly my-8 p-4">
+        {/* banner */}
+        <div className="flex-col justify-center grid content-center">
+          <div className=" space-y-2">
+            <p className="font-semibold text-xl">Bảng giá</p>
+            <h1 className="text-4xl font-bold">PET SERVICE </h1>
+            <h1 className="text-6xl font-extrabold">COMBO</h1>
+            <div className="w-1/3 p-2 border-b-4 border-dotted border-indigo-500"></div>
+          </div>
+        </div>
+        {/* combo1 */}
+        <div className="text-center space-y-8 py-4 w-80 flex-col flex border border-black rounded-lg shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+          <div className="text-4xl space-y-2">
+            <p>😀</p>
+            <h1 className="text-blue-400 font-bold">COMBO#1</h1>
+          </div>
+          <div class="grid justify-items-end">
+            <div className="flex text-white p-4 bg-gray-600 rounded-l-full w-9/10">
+              <p className="text-md">Chỉ từ</p>
+              <p className="ml-2 text-4xl font-bold">200,000 </p>
+              <p className="ml-2 text-2xl font-semibold mt-auto">VNĐ</p>
+            </div>
+          </div>
+
+          <ul className="font-semibold space-y-2">
+            <li>✅ CẠO LÔNG</li>
+            <li>✅ TẮM SẤY</li>
+            <li>❌ VỆ SINH / XỊT THƠM</li>
+            <li>❌ CẮT TỈA / TẠO KIỂU</li>
+          </ul>
+
+          {/* book now */}
+          <div>
+            <p className="font-bold text-lg hover:text-blue-400 transition cursor-pointer">
+              &#9998;
+              <t />
+              Đặt Lịch Ngay
+            </p>
+          </div>
+        </div>
+
+        {/* combo2 */}
+        <div className="text-center space-y-8 py-4 w-80 flex-col flex border border-black rounded-lg shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+          <div className="text-4xl space-y-2">
+            <p>😊</p>
+            <h1 className="text-blue-400 font-bold">COMBO#2</h1>
+          </div>
+          <div class="grid justify-items-end">
+            <div className="flex text-white p-4 bg-gray-600 rounded-l-full w-9/10">
+              <p className="text-md">Chỉ từ</p>
+              <p className="ml-2 text-4xl font-bold">200,000 </p>
+              <p className="ml-2 text-2xl font-semibold mt-auto">VNĐ</p>
+            </div>
+          </div>
+
+          <ul className="font-semibold space-y-2">
+            <li>✅ CẠO LÔNG</li>
+            <li>✅ TẮM SẤY</li>
+            <li>✅ VỆ SINH / XỊT THƠM</li>
+            <li>❌ CẮT TỈA / TẠO KIỂU</li>
+          </ul>
+
+          {/* book now */}
+          <div>
+            <p className="font-bold text-lg hover:text-blue-400 transition cursor-pointer">
+              &#9998;
+              <t />
+              Đặt Lịch Ngay
+            </p>
+          </div>
+        </div>
+
+        {/* combo3 */}
+        <div className="text-center space-y-8 py-4 w-80 flex-col flex border border-black rounded-lg shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+          <div className="text-4xl space-y-2">
+            <p>😍</p>
+            <h1 className="text-blue-400 font-bold">COMBO#3</h1>
+          </div>
+          <div class="grid justify-items-end">
+            <div className="flex text-white p-4 bg-gray-600 rounded-l-full w-9/10">
+              <p className="text-md">Chỉ từ</p>
+              <p className="ml-2 text-4xl font-bold">200,000 </p>
+              <p className="ml-2 text-2xl font-semibold mt-auto">VNĐ</p>
+            </div>
+          </div>
+
+          <ul className="font-semibold space-y-2">
+            <li>✅ CẠO LÔNG</li>
+            <li>✅ TẮM SẤY</li>
+            <li>✅ VỆ SINH / XỊT THƠM</li>
+            <li>✅ CẮT TỈA / TẠO KIỂU</li>
+          </ul>
+
+          {/* book now */}
+          <div>
+            <p className="font-bold text-lg hover:text-blue-400 transition cursor-pointer">
+              &#9998;
+              <t />
+              Đặt Lịch Ngay
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
