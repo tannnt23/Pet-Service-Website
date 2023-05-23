@@ -178,41 +178,224 @@ function Content() {
       {/* -- Home 4 */}
 
       {/* Home 5 */}
-      <div className="flex justify-center h-96 w-screen p-10">
-        <div className="flex justify-center  h-full w-screen">
+      <div className="flex-col justify-center h-2/3 p-6">
+        <div>
+          <div className="flex justify-center ">
+            <div>
+              <div className="flex w-1/3 h-6 ">
+                <div
+                  id="line"
+                  className="w-16 h-full mr-2 border-b-2 border-indigo-500"
+                ></div>
+                <div>
+                  <p className=" text-lg font-semibold">Thông Tin</p>
+                </div>
+              </div>
+              <div className="py-5 ">
+                <h1 className="text-6xl font-bold ">
+                  Spa Cho Thú Cưng <br />{" "}
+                  <i className="text-blue-500">Chuẩn 5 Sao</i>
+                </h1>
+              </div>
+              <div className="mt-5">
+                <button class="hover:bg-white text-md hover:text-blue-500 bg-blue-500 text-white transition font-semibold rounded-full p-4">
+                  Xem thêm
+                </button>
+              </div>
+            </div>
+            <div className="">
+              <img
+                className="object-fill h-full w-full"
+                src="https://c4.wallpaperflare.com/wallpaper/598/261/137/dog-%C2%A0cat-%C2%A0poster-%C2%A0white-background-wallpaper-preview.jpg"
+                alt="Transparent Dog And Cat Png - Dog Cat And Ferret, Png Download@kindpng.com"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="h-16 flex justify-center bg-gray-200 text-xl place-items-center font-semibold">
+          <div className="flex justify-start">
+            <p className="mr-2">&hearts;</p>DỊCH VỤ CHUYÊN NGHIỆP
+          </div>
+          <div className=" ml-4 text-blue-900">⚡NHANH CHÓNG</div>
+        </div>
+      </div>
+
+      {/* ---Home 5--- */}
+
+      {/* Home 6 */}
+      <div className="flex justify-center p-10">
+        {/* Left */}
+        <div className="w-1/2 flex justify-end  ">
+          <img
+            className=" mr-5 border-4 border-white rounded shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px]"
+            src="https://petservicehcm.com/wp-content/uploads/2020/12/z2250885338986_82392d19b13edd865a8b39f5d9ba8074-1440x1080.jpg.webp"
+          />
+        </div>
+        {/* ---Left--- */}
+
+        {/* Right */}
+        <div className="w-1/2 flex justify-center ">
           <div className="">
-            <div className="flex w-48 h-6 ">
-              <div
-                id="line"
-                className="w-16 h-full mr-2 border-b-2 border-indigo-500"
-              ></div>
-              <div>
-                <p className=" text-lg font-semibold">Thông Tin</p>
+            {/* title section*/}
+            <div className="flex w-96 h-6 ">
+              <div className="w-16 h-full mr-2 border-b-2 border-indigo-500"></div>
+              <div className="">
+                <p className=" text-lg font-semibold">Thông Tin & Bảng Giá</p>
               </div>
             </div>
             <div className="py-5 ">
               <h1 className="text-6xl font-bold ">
-                Spa Cho Thú Cưng <br />{" "}
-                <i className="text-blue-500">Chuẩn 5 Sao</i>
+                Dịch vụ cắt tỉa lông <br />{" "}
+                <i className="text-blue-500">tại nhà</i>
               </h1>
             </div>
-            <div className="mt-5">
-              <button class="hover:bg-white text-md hover:text-blue-500 bg-blue-500 text-white transition font-semibold rounded-full p-4">
+            <div className=" mt-4 flex justify-between  h-1/4">
+              {/* content section */}
+
+              <div>
+                {/* left */}
+                <ul className="text-md font-semibold italic space-y-4">
+                  <li>
+                    <span className="mr-2">&#10003;</span>Cắt gọn lông
+                  </li>
+                  <li>
+                    <span className="mr-2">&#10003;</span>Tỉa lông tạo kiểu
+                  </li>
+                  <li>
+                    <span className="mr-2">&#10003;</span>Cạo lông
+                  </li>
+                </ul>
+              </div>
+              <div className="flex justify-center items-center  w-1/2 h-1/2">
+                {/* right */}
+                <div>
+                  <h1 className="font-bold text-xl inline-block">
+                    Chỉ từ <br />
+                    <i className="text-blue-500 text-2xl">400.000đ</i>
+                  </h1>
+                </div>
+              </div>
+            </div>
+            <div className="">
+              {/* button group */}
+              <button class="bg-white text-sm text-blue-500 box-border border  border-blue-500 hover:bg-blue-500 hover:text-white transition font-bold rounded-full p-4">
                 Xem thêm
+              </button>
+              <button class="ml-2 hover:bg-white text-sm box-border hover:text-blue-500 bg-blue-500 text-white transition font-semibold rounded-full p-4">
+                Đặt lịch ngay
               </button>
             </div>
           </div>
-          <div className="">
-            <img
-              className="object-fill h-full w-full"
-              src="https://c4.wallpaperflare.com/wallpaper/598/261/137/dog-%C2%A0cat-%C2%A0poster-%C2%A0white-background-wallpaper-preview.jpg"
-              alt="Transparent Dog And Cat Png - Dog Cat And Ferret, Png Download@kindpng.com"
-            />
+        </div>
+        {/* ---Right--- */}
+      </div>
+
+      {/* -- Home 6 */}
+
+      {/* Home 7 */}
+      <div className="flex justify-center justify-evenly my-8 p-4">
+        {/* banner */}
+        <div className="flex-col justify-center grid content-center">
+          <div className=" space-y-2">
+            <p className="font-semibold text-xl">Bảng giá</p>
+            <h1 className="text-4xl font-bold">PET SERVICE </h1>
+            <h1 className="text-6xl font-extrabold">COMBO</h1>
+            <div className="w-1/3 p-2 border-b-4 border-dotted border-indigo-500"></div>
+          </div>
+        </div>
+        {/* combo1 */}
+        <div className="text-center space-y-8 py-4 w-80 flex-col flex border border-black rounded-lg shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+          <div className="text-4xl space-y-2">
+            <p>😀</p>
+            <h1 className="text-blue-400 font-bold">COMBO#1</h1>
+          </div>
+          <div class="grid justify-items-end">
+            <div className="flex text-white p-4 bg-gray-600 rounded-l-full w-9/10">
+              <p className="text-md">Chỉ từ</p>
+              <p className="ml-2 text-4xl font-bold">200,000 </p>
+              <p className="ml-2 text-2xl font-semibold mt-auto">VNĐ</p>
+            </div>
+          </div>
+
+          <ul className="font-semibold space-y-2">
+            <li>✅ CẠO LÔNG</li>
+            <li>✅ TẮM SẤY</li>
+            <li>❌ VỆ SINH / XỊT THƠM</li>
+            <li>❌ CẮT TỈA / TẠO KIỂU</li>
+          </ul>
+
+          {/* book now */}
+          <div>
+            <p className="font-bold text-lg hover:text-blue-400 transition cursor-pointer">
+              &#9998;
+              <t />
+              Đặt Lịch Ngay
+            </p>
+          </div>
+        </div>
+
+        {/* combo2 */}
+        <div className="text-center space-y-8 py-4 w-80 flex-col flex border border-black rounded-lg shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+          <div className="text-4xl space-y-2">
+            <p>😊</p>
+            <h1 className="text-blue-400 font-bold">COMBO#2</h1>
+          </div>
+          <div class="grid justify-items-end">
+            <div className="flex text-white p-4 bg-gray-600 rounded-l-full w-9/10">
+              <p className="text-md">Chỉ từ</p>
+              <p className="ml-2 text-4xl font-bold">200,000 </p>
+              <p className="ml-2 text-2xl font-semibold mt-auto">VNĐ</p>
+            </div>
+          </div>
+
+          <ul className="font-semibold space-y-2">
+            <li>✅ CẠO LÔNG</li>
+            <li>✅ TẮM SẤY</li>
+            <li>✅ VỆ SINH / XỊT THƠM</li>
+            <li>❌ CẮT TỈA / TẠO KIỂU</li>
+          </ul>
+
+          {/* book now */}
+          <div>
+            <p className="font-bold text-lg hover:text-blue-400 transition cursor-pointer">
+              &#9998;
+              <t />
+              Đặt Lịch Ngay
+            </p>
+          </div>
+        </div>
+
+        {/* combo3 */}
+        <div className="text-center space-y-8 py-4 w-80 flex-col flex border border-black rounded-lg shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px]">
+          <div className="text-4xl space-y-2">
+            <p>😍</p>
+            <h1 className="text-blue-400 font-bold">COMBO#3</h1>
+          </div>
+          <div class="grid justify-items-end">
+            <div className="flex text-white p-4 bg-gray-600 rounded-l-full w-9/10">
+              <p className="text-md">Chỉ từ</p>
+              <p className="ml-2 text-4xl font-bold">200,000 </p>
+              <p className="ml-2 text-2xl font-semibold mt-auto">VNĐ</p>
+            </div>
+          </div>
+
+          <ul className="font-semibold space-y-2">
+            <li>✅ CẠO LÔNG</li>
+            <li>✅ TẮM SẤY</li>
+            <li>✅ VỆ SINH / XỊT THƠM</li>
+            <li>✅ CẮT TỈA / TẠO KIỂU</li>
+          </ul>
+
+          {/* book now */}
+          <div>
+            <p className="font-bold text-lg hover:text-blue-400 transition cursor-pointer">
+              &#9998;
+              <t />
+              Đặt Lịch Ngay
+            </p>
           </div>
         </div>
       </div>
-
-      {/* -- Home 5 */}
     </div>
   );
 }
