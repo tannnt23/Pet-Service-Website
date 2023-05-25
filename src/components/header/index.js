@@ -6,6 +6,7 @@ import { FaCartPlus } from 'react-icons/fa'
 import { FaPhone } from 'react-icons/fa'
 import { FaChevronDown } from 'react-icons/fa'
 import CartNotification from '../page/CartNotification';
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import { useState } from 'react';
 function Header() {
     const [show, setShow] = useState(false)
@@ -89,10 +90,11 @@ function Header() {
                         <Link to='/About' className='p-1.5 self-center font-bold text-neutral-600 hover:text-blue-600 '>GIỚI THIỆU</Link>
                         <Link to='' className='p-1.5 self-center font-bold text-neutral-600 flex items-center hover:text-blue-600  relative  group  '>DỊCH VỤ
                             <ul className=' hidden w-264 group-hover:block  z-10 absolute  top-full rounded-lg text-sm text-cyan-900 bg-slate-100 border border-solid border-[#273172] pt-2 '>
-                                <li className=' left-0  p-3 hover:text-blue-600 '> <Link to=''>THÚ Y TẠI NHÀ</Link></li>
-                                <li className=' left-0  p-3 hover:text-blue-600  '><Link to=''>TẮM - VỆ SINH TẠI NHÀ</Link></li>
-                                <li className=' left-0  p-3 hover:text-blue-600  '><Link to=''>CẮT- TỈA LÔNG TẠI NHÀ</Link></li>
-                                <li className=' left-0  p-3 hover:text-blue-600  '><Link to=''>DẮT CHÓ ĐI DẠO</Link></li>
+                                <li className=' left-0  p-3 hover:text-blue-600 '> <AnchorLink href='#home4'>THÚ Y TẠI NHÀ</AnchorLink></li>
+                                <li className=' left-0  p-3 hover:text-blue-600  '><AnchorLink href='#home5'>TẮM - VỆ SINH TẠI NHÀ</AnchorLink></li>
+                                <li className=' left-0  p-3 hover:text-blue-600  '><AnchorLink href='#home6'>CẮT - TỈA LÔNG TẠI NHÀ</AnchorLink></li>
+                                <li className=' left-0  p-3 hover:text-blue-600  '><AnchorLink href='#home7'>COMBO</AnchorLink></li>
+                                
                             </ul>
                             <FaChevronDown className='self-center pl-1 font-none inline' /></Link>
                         <Link to='' className=' p-1.5 self-center font-bold text-neutral-600 hover:text-blue-600  relative group flex items-center'>CỬA HÀNG

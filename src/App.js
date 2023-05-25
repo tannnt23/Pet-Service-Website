@@ -12,6 +12,7 @@ import TreatmentProduct from './components/page/TreatmentProduct.js';
 import About from './components/page/About.js';
 import OnlineBooking from './components/page/OnlineBooking.js';
 import ViewCart from './components/page/ViewCart.js';
+
 function App() {
   return (
     <div className='app'>
