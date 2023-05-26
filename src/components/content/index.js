@@ -1,3 +1,4 @@
+import { Routes, Route, Link } from 'react-router-dom';
 import { FaChevronDown } from "react-icons/fa";
 import { FaDog } from "react-icons/fa";
 import { FaBroom } from "react-icons/fa";
@@ -281,9 +282,11 @@ function Content() {
               <button class="bg-white text-sm text-blue-500 box-border border  border-blue-500 hover:bg-blue-500 hover:text-white transition font-bold rounded-full p-4">
                 Xem thêm
               </button>
-              <button class="ml-2 hover:bg-white text-sm box-border hover:text-blue-500 bg-blue-500 text-white transition font-semibold rounded-full p-4">
-                Đặt lịch ngay
-              </button>
+              <Link to='/OnlineBooking'>
+                <button class="ml-2 hover:bg-white text-sm box-border hover:text-blue-500 bg-blue-500 text-white transition font-semibold rounded-full p-4">
+                  Đặt lịch ngay
+                </button>
+              </Link>
             </div>
           </div>
         </div>
