@@ -155,7 +155,7 @@ function Content() {
 
       {/* Home 4 */}
 
-      <div class="flex h-80 justify-center items-center flex-col">
+      <div id="home4" class="flex h-80 justify-center items-center flex-col">
         <div class="w-full h-screen bg-[url('https://www.catbreedslist.com/uploads/cat-pictures/british-shorthair-2.jpg')] bg-cover bg-center">
           <div class="w-full h-full flex justify-center items-center bg-blue-700/30 backdrop-brightness-50">
             <div class="text-white text-left mr-5">
@@ -179,7 +179,7 @@ function Content() {
       {/* -- Home 4 */}
 
       {/* Home 5 */}
-      <div className="flex-col justify-center h-2/3 p-6">
+      <div id="home5" className="flex-col justify-center h-2/3 p-6">
         <div>
           <div className="flex justify-center ">
             <div>
@@ -224,7 +224,7 @@ function Content() {
       {/* ---Home 5--- */}
 
       {/* Home 6 */}
-      <div className="flex justify-center p-10">
+      <div id="home6" className="flex justify-center p-10">
         {/* Left */}
         <div className="w-1/2 flex justify-end  ">
           <img
@@ -296,7 +296,7 @@ function Content() {
       {/* -- Home 6 */}
 
       {/* Home 7 */}
-      <div className="flex justify-center justify-evenly my-8 p-4">
+      <div id="home7" className="flex justify-center justify-evenly my-8 p-4">
         {/* banner */}
         <div className="flex-col justify-center grid content-center">
           <div className=" space-y-2">
@@ -346,7 +346,7 @@ function Content() {
           <div class="grid justify-items-end">
             <div className="flex text-white p-4 bg-gray-600 rounded-l-full w-9/10">
               <p className="text-md">Chỉ từ</p>
-              <p className="ml-2 text-4xl font-bold">200,000 </p>
+              <p className="ml-2 text-4xl font-bold">300,000 </p>
               <p className="ml-2 text-2xl font-semibold mt-auto">VNĐ</p>
             </div>
           </div>
@@ -377,7 +377,7 @@ function Content() {
           <div class="grid justify-items-end">
             <div className="flex text-white p-4 bg-gray-600 rounded-l-full w-9/10">
               <p className="text-md">Chỉ từ</p>
-              <p className="ml-2 text-4xl font-bold">200,000 </p>
+              <p className="ml-2 text-4xl font-bold">400,000 </p>
               <p className="ml-2 text-2xl font-semibold mt-auto">VNĐ</p>
             </div>
           </div>
